@@ -1,0 +1,42 @@
+\input{article preambles}
+
+\setcounter{section}{-1}
+
+\input{commands}
+
+%I usually write \tensor instead of \otimes
+
+\newcommand{\toroidal}{ \boldsymbol{ \caly } } %toroidal lie (bi)algebras (without derivations)
+\newcommand{\extendedtoroidal}{ \hat{ \boldsymbol{ \caly } } } %toroidal lie (bi)algebras (with derivations)
+\renewcommand{\simpleroots}{\mathbb{I}}
+\newcommand{\divzero}{\der_{\gamma}(A)}
+
+\begin{document}
+
+    \title{Classical limits of affine Yangians}
+    
+    \author{Dat Minh Ha and Peggy Jankovic}
+    \maketitle
+    
+    \begin{abstract}
+        
+    \end{abstract}
+    
+    {
+    \hypersetup{} 
+    %\dominitoc
+    \tableofcontents %sort sections alphabetically
+    }
+
+    \input{Sections/introduction}
+
+    \input{Sections/toroidal_lie_bialgebras}
+
+    \input{Sections/R_matrices_of_affine_yangians}
+
+    \input{Sections/RTT_presentation_for_affine_yangians}
+    
+    \addcontentsline{toc}{section}{References}
+    \printbibliography
+
+\end{document}
