@@ -1,0 +1,40 @@
+\input{article preambles}
+
+\setcounter{section}{-1}
+
+\input{commands}
+
+%I usually write \tensor instead of \otimes
+
+\newcommand{\toroidal}{ \tilde{\g}_{[2]} } %toroidal lie (bi)algebras (without derivations)
+\newcommand{\extendedtoroidal}{ \hat{\g}_{[2]} } %toroidal lie (bi)algebras (with derivations)
+\renewcommand{\simpleroots}{\mathbb{I}}
+\newcommand{\divzero}{\d_{[2]}}
+
+\begin{document}
+
+    \title{Classical limits of affine Yangians}
+    
+    \author{Dat Minh Ha and Peggy Jankovic}
+    \maketitle
+    
+    \begin{abstract}
+        We construct a topological Lie bialgebra structure on toroidal Lie algebras equipped with a degree-$(0, -1)$ bilinear form - as in \cite{msc_thesis_gamma_extended_toroidal_lie_algebras} - and then verify that, in the cases when the \say{underlying} affine Kac-Moody algebra is of a simply laced type, this coincides with the classical limits of the corresponding affine Yangians. Additionally, we make some connections with the theory of EALAs in the multi-loop realisation from \cite{allison_berman_faulkner_pianzola_multiloop_realisation_of_EALAs}, as well as that of quantum toroidal algebra from \cite{laurie_toroidal_QUEs_coproducts_2}.
+    \end{abstract}
+    
+    {
+    \hypersetup{} 
+    %\dominitoc
+    \tableofcontents %sort sections alphabetically
+    }
+
+    \input{Classical limits of affine Yangians/introduction_classical_limits_affine_yangians}
+
+    \input{Classical limits of affine Yangians/toroidal_lie_algebras}
+
+    \input{Classical limits of affine Yangians/classical_limits_of_affine_yangians}
+    
+    \addcontentsline{toc}{section}{References}
+    \printbibliography
+
+\end{document}

@@ -1,0 +1,24 @@
+\section{Toroidal Lie (bi)algebras}
+    \subsection{Recollection about UCEs of current algebras}
+        Let us begin by recalling the following description of universal central extensions (UCEs) of current algebras, i.e. of Lie algebras of the form $\g \tensor A$ wherein $A$ is a commutative algebra, due to Kassel. For a self-contained but comprehensive account of the following facts, we direct the reader to \cite[Section 2.2]{msc_thesis_gamma_extended_toroidal_lie_algebras}.
+        
+        First of all, for brevity, let us write $xf$ to denote the pure tensors $x \tensor f \in \g \tensor A$. On $\g \tensor A$, the Lie algebra structure is given by:
+            $$[xf, yg]_{\g \tensor A} := [x, y]_{\g} fg$$
+        It is worth noting, that with this Lie bracket, $\g \tensor A$ is a perfect Lie algebra\footnote{A Lie algebra is said to be perfect if it is equal to its derived subalgebra.} as a consequence of the simplicity of the Lie algebra $\g$ that we assumed from before. This fact is important because Lie algebras are perfect if and only if they admit UCEs (see \cite[Lemma 1.10]{garland_arithmetics_of_loop_groups}); for a perfect Lie algebra $\a$, we denote its UCE by $\uce(\g \tensor A)$. It is also desirable to have a description of the structure of $\uce(\g \tensor A)$, and since:
+            $$\uce(\g \tensor A) \cong ( \g \tensor A ) \oplus^{\e} $$
+        wherein $\e: \bigwedge^2 (\g \tensor A) \to \z( \uce(\g \tensor A) )$ is the universal Lie $2$-cocycle, it suffices to give a more detailed description of the centre. In \cite{kassel_universal_central_extensions_of_lie_algebras}, Kassel demonstrated via the use of cyclic cohomology, that the centre can be given via:
+            $$\z( \uce(\g \tensor A) ) \cong \bar{\Omega}^1_A := \Omega^1_A/dA \quad, \quad \e(xf, yg) := (x, y)_{\g} g \bar{d}f$$
+        wherein $\Omega^1_A$ denotes the $A$-module of algebraic $1$-forms on $A$, regarded here as a $\bbC$-vector space, $d: A \to \Omega^1_A$ is the initial object in the category of $A$-module homomorphisms $d': A \to \Omega'$ such that $d'(fg) = fdg + gdf$ (see \cite[\href{https://stacks.math.columbia.edu/tag/00RM}{Tag 00RM}]{stacks-project} for more details), and we have written $\bar{d}f$ for the image of $df \in \Omega^1_A$ under the canonical quotient map $\Omega^1_A \to \bar{\Omega}^1_A$.
+
+        More can be said when $A$ is graded by some abelian group $Z$, say $A := \bigoplus_{n \in Z} A_n$. In this case, $\g \tensor A$ and $\Omega^1_A$ carry an induced $Z$-grading given by:
+            $$\g \tensor A = \bigoplus_{n \in Z} (\g \tensor A)_n \quad, \quad (\g \tensor A)_n := \g \tensor A_n$$
+            $$\Omega^1_A = \bigoplus_{n \in Z} (\Omega^1_A)_n \quad, \quad (\Omega^1_A)_n := \bigoplus_{ \substack{i, j \in Z\\i + j = n} } \frac{A_i \tensor A_j}{}$$
+        Together, these two induced $Z$-gradings induce a further $Z$-grading on $\uce(\g \tensor A)$, determined by:
+            $$\bar{\Omega}^1_A := \bigoplus_{n \in Z} ( \bar{\Omega}^1_A )_n, \quad, \quad ( \bar{\Omega}^1_A )_n := ( \Omega^1_A )_n/dA_n$$
+        At the same time, for a distinguished element $n_0 \in Z$, one can define a symmetric, non-degenerate, and invariant bilinear form on $\g \tensor A$ given by:
+            $$(x f, y g)_{\g \tensor A} := (x, y)_{\g} \delta_{ \deg f + \deg g, n_0 }$$
+        This form extends naturally to $\uce(\g \tensor A)$, though by invariance, this extension does not retain the non-degeneracy property: in fact, it is easy to show that the radical of this extended bilinear form - which shall be denoted by $(\cdot, \cdot)_{\uce(\g \tensor A)}$ - is precisely the centre $\z( \uce(\g \tensor A) )$.
+
+    \subsection{(Extended) toroidal Lie algebras}
+
+    \subsection{Lie bialgebra structures}

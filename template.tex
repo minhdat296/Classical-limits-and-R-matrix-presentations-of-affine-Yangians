@@ -6,14 +6,14 @@
 
 %I usually write \tensor instead of \otimes
 
-\newcommand{\toroidal}{ \boldsymbol{ \caly } } %toroidal lie (bi)algebras (without derivations)
-\newcommand{\extendedtoroidal}{ \hat{ \boldsymbol{ \caly } } } %toroidal lie (bi)algebras (with derivations)
+\newcommand{\toroidal}{ \tilde{\g}_{[2]} } %toroidal lie (bi)algebras (without derivations)
+\newcommand{\extendedtoroidal}{ \hat{\g}_{[2]} } %toroidal lie (bi)algebras (with derivations)
 \renewcommand{\simpleroots}{\mathbb{I}}
-\newcommand{\divzero}{\der_{\gamma}(A)}
+\newcommand{\divzero}{\d_{[2]}}
 
 \begin{document}
 
-    \title{Classical limits of affine Yangians}
+    \title{}
     
     \author{Dat Minh Ha and Peggy Jankovic}
     \maketitle
@@ -27,14 +27,6 @@
     %\dominitoc
     \tableofcontents %sort sections alphabetically
     }
-
-    \input{Sections/introduction}
-
-    \input{Sections/toroidal_lie_bialgebras}
-
-    \input{Sections/R_matrices_of_affine_yangians}
-
-    \input{Sections/RTT_presentation_for_affine_yangians}
     
     \addcontentsline{toc}{section}{References}
     \printbibliography
