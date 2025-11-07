@@ -1,6 +1,14 @@
 \section{Introduction}
     \subsection{Notations}
-        Throughout, we fix a finite-dimensional simple Lie algebra $\g$ over $\bbC$, though in principle, we can work over any algebraically closed field characteristic $0$. On this Lie algebra, we choose once and for all a symmetric, non-degenerate, and invariant bilinear form $(\cdot, \cdot)_{\g}$; \textit{a priori}, any such bilinear form is a non-zero scalar multiple of the Killing form. Let us fix also a Cartan subalgebra $\h \subset \g$ of dimension $l$. By means of the bilinear form fixed above, we can define a root system $\rootsystem \subset \h^*$, in which we choose a subset of simple roots indexed by a set $\simpleroots$ of cardinality $l$. With respect to these choices, we have a set of Chevalley-Serre generators $\{h_i, x_i^{\pm}\}_{i \in \simpleroots}$, normalised so that $(h_i, h_j)_{\g} = \delta_{i, j}$. 
+        \begin{convention}[Formal distributions]
+            \input{Setup files and appendices/notations_formal_distributions}
+        \end{convention}
+    
+        \begin{convention}
+            Throughout, we fix a finite-dimensional simple Lie algebra $\g$ over $\bbC$, though in principle, we can work over any algebraically closed field characteristic $0$. On this Lie algebra, we choose once and for all a symmetric, non-degenerate, and invariant bilinear form $(\cdot, \cdot)_{\g}$; \textit{a priori}, any such bilinear form is a non-zero scalar multiple of the Killing form. Let us fix also a Cartan subalgebra $\h \subset \g$ of dimension $l$. By means of the bilinear form fixed above, we can define a root system $\rootsystem \subset \h^*$, in which we choose a subset of simple roots indexed by a set $\simpleroots$ of cardinality $l$. With respect to these choices, we have a set of Chevalley-Serre generators $\{h_i, e_i^{\pm}\}_{i \in \simpleroots}$, normalised so that $(h_i, h_j)_{\g} = \1_{i, j}$, wherein $\1_{i, j}$ is the Kronecker delta.
+        \end{convention}
+
+        \todo[inline]{Dat: I honestly cannot decide if $\boldsymbol{ \caly }, \boldsymbol{ \calu }$, or $\fraku$, or $\t$ is the best notation for toroidal Lie algebras. The first is supposed to invoke "Yangian", but it is slightly misleading since the affine Yangian descends to $\boldsymbol{ \caly }^+$ (the "positive" part of the Manin triple). The second and third one should probably be reserve for the classical limit of the quantum toroidal algebra. The last one is the one that Curtis uses, but my reservations with it are that 1. $\t$ is also usually used for toral Lie subalgebras (in the sense of being a Lie subalgebra containing semi-simple elements), 2. we already have a lot of t's, and 3. $\t^+$ is kind of an eye sore in my opinion, since it consists of two similar symbols. What do you think ?}
 
     \subsection{Context}
 

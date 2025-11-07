@@ -6,10 +6,10 @@
 
 %I usually write \tensor instead of \otimes
 
-\newcommand{\toroidal}{ \boldsymbol{\caly} } %toroidal lie (bi)algebras (without derivations)
+\newcommand{\toroidal}{ \boldsymbol{ \caly } } %toroidal lie (bi)algebras (without derivations)
 \newcommand{\extendedtoroidal}{ \hat{\toroidal} } %toroidal lie (bi)algebras (with derivations)
 \renewcommand{\simpleroots}{\mathbb{I}}
-\newcommand{\divzero}{\d}
+\newcommand{\divzero}{\der_{\gamma}}
 
 \begin{document}
 
@@ -19,7 +19,7 @@
     \maketitle
     
     \begin{abstract}
-        We construct a topological Lie bialgebra structure on toroidal Lie algebras equipped with a degree-$(0, -1)$ bilinear form - as in \cite{msc_thesis_gamma_extended_toroidal_lie_algebras} - and then verify that, in the cases when the \say{underlying} affine Kac-Moody algebra is of a simply laced type, this coincides with the classical limits of the corresponding affine Yangians. Additionally, we make some connections with the theory of EALAs in the multi-loop realisation from \cite{allison_berman_faulkner_pianzola_multiloop_realisation_of_EALAs}, as well as that of quantum toroidal algebra from \cite{laurie_toroidal_QUEs_coproducts_2}.
+        As a continuation of \cite{msc_thesis_gamma_extended_toroidal_lie_algebras}, we construct a topological Lie bialgebra structure on toroidal Lie algebras equipped with a bilinear form of degree $(0, -1)$. We then verify that, in the cases when the \say{underlying} affine Kac-Moody algebra is of a simply laced type, this coincides with the classical limits of the corresponding affine Yangians. Additionally, we make some preliminary connections with the theory of EALAs in the multi-loop realisation from \cite{allison_berman_faulkner_pianzola_multiloop_realisation_of_EALAs} via the theory of quantum toroidal algebra from \cite{laurie_toroidal_QUEs_coproducts_2}.
     \end{abstract}
     
     {
@@ -32,7 +32,32 @@
 
     \input{Classical limits of affine Yangians/toroidal_lie_algebras}
 
+    \input{Classical limits of affine Yangians/affine_yangians_as_associative_algebras}
+
     \input{Classical limits of affine Yangians/classical_limits_of_affine_yangians}
+
+    \input{Classical limits of affine Yangians/classical_limits_of_toroidal_QUEs}
+
+    \begin{appendices}
+        \section{Manin triples, (topological) Lie bialgebras, and their quantisations} 
+            \subsection{Manin triples and (topological) Lie bialgebras} \label{subsection: manin_triples}
+                \input{Setup files and appendices/setup_manin_triples}
+
+            \subsection{Coboundary and (quasi-)triangular topological Lie bialgebras} \label{subsection: coboundary_and_(quasi)_triangular_topological_lie_bialgebras}
+                \input{Setup files and appendices/setup_coboundary_lie_bialgebras}
+
+            \subsection{Quantisation of (topological) Lie bialgebras}
+                \input{Setup files and appendices/setup_quantisation_of_lie_bialgebras}
+    
+        \section{(Quantum) Kac-Moody Lie algebras}
+            \subsection{Kac-Moody algebras} \label{subsection: setup_kac_moody_algebras}
+                \input{Setup files and appendices/setup_kac_moody_algebras}
+
+            \subsection{The standard Kac-Moody Lie bialgebra structure and its quantisation} \label{subsection: setup_standard_kac_moody_lie_bialgebras}
+                \input{Setup files and appendices/setup_standard_kac_moody_lie_bialgebras}
+
+                \input{Setup files and appendices/setup_quantum_kac_moody_algebras}
+    \end{appendices}
     
     \addcontentsline{toc}{section}{References}
     \printbibliography

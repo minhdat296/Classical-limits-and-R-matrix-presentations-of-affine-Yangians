@@ -1,0 +1,67 @@
+\todo[inline]{Coboundary Lie bialgebras}
+
+\begin{definition}[Coboundary topological Lie bialgebras] \label{def: coboundary_topological_lie_bialgebras}
+    
+\end{definition}
+\begin{remark}[Non-uniqueness of classical r-matrices] \label{remark: classical_r_matrices_non_uniqueness}
+    
+\end{remark}
+Then, one can check - simply using the construction of the Chevalley-Eilenberg differential - that the topological Lie bialgebra structure above can be given more succinctly by the following formula:
+    \begin{equation} \label{equation: coboundary_lie_cobrackets}
+        \delta(x) := [\Box(x), \calr] \quad, \quad x \in \a
+    \end{equation}
+wherein $\Box(x) := x \tensor 1 + 1 \tensor x$ (see \cite[Section 3.2]{etingof_schiffmann_lectures_on_quantum_groups}). From this, we see that $\calr$ must also satisfy the property whereby:
+    \begin{equation} \label{equation: quasi_unitary_classical_r_matrices}
+        \Sym(\calr) := \frac12( \calr_{1, 2} + \calr_{2, 1} ) \in (\a \hattensor \a)^{\a}
+    \end{equation}
+i.e. whereby $\Sym(\calr)$ is $\a$-invariant (so that $[\Box(x), \Sym(\calr)] = 0$ for all $x \in \a$), which can be referred to as \textbf{quasi-unitarity}. Equivalently, this is saying that $\calr \in \bigwedge^2 \a \subset \a \hattensor \a$. It is then natural to pose the following question.
+\begin{remark}
+    \textit{A priori}, any $2$-tensor can be decomposed into the sum of its symmetric and alternating component. In particular, one can verify that:
+        $$\Alt(\calr) := \calr - \Sym(\calr) = \frac12(\calr_{1, 2} - \calr_{2, 1})$$
+    is alternating, and obviously $\calr = \Sym(\calr) + \Alt(\calr)$ by construction.
+\end{remark}
+\begin{question}
+    Which alternating $2$-tensor $\calr \in \bigwedge^2 \a$ gives rise to a topological Lie bialgebra structure $\delta: \a \to \a \hattensor \a$ by means of equation \eqref{equation: coboundary_lie_cobrackets} ?
+\end{question}
+Of course, one should not expect that every alternating $2$-tensor $\calr \in \bigwedge^2 \a$ would give rise to a Lie bialgebra structure via formula \eqref{equation: unitary_classical_r_matrices}, and this is because for a general alternating tensor $\calr \in \bigwedge^2 \a$, the map $\delta := [\Box, \calr]: \a \to \a \hattensor \a$ may not satisfy the co-Jacobi identity.
+\begin{lemma}[Drinfeld] \label{lemma: coboundary_lie_bialgebras_and_CYBEs}
+    For any $\calr \in \a \hattensor \a$, let us write:
+        \begin{equation} \label{equation: classical_yang_baxter_tensor}
+            \CYBE(\calr) := [\calr_{1, 2}, \calr_{1, 3}] + [\calr_{1, 2}, \calr_{2, 3}] + [\calr_{1, 3}, \calr_{2, 3}] \in \a \hattensor \a \hattensor \a
+        \end{equation}
+    to denote the \textbf{classical Yang-Baxter tensor}. 
+
+    An alternating $2$-tensor:
+        $$\calr \in \bigwedge^2 \a$$
+    gives rise to a topological Lie bialgebra structure:
+        $$\delta: \a \to \a \hattensor \a$$
+    given by equation \eqref{equation: coboundary_lie_cobrackets} (and hence this topological Lie bialgebra structure is automatically coboundary) if and only if $\CYBE(\calr)$ is an invariant alternating element of $\a \hattensor \a \hattensor \a$, i.e. if and only if:
+        $$\CYBE(\calr) \in \left( \bigwedge^3 \a \right)^{\a}$$
+\end{lemma}
+    \begin{proof}
+        See \cite[Theorem 3.1]{etingof_schiffmann_lectures_on_quantum_groups}.
+    \end{proof}
+
+\begin{definition}[(Quasi-)triangular topological Lie bialgebras] \label{def: (quasi)_triangular_topological_lie_algebras}
+    A coboundary topological Lie bialgebra $(\a, \delta, \calr)$ is \textbf{quasi-triangular} if and only if $\calr$ satisfies the \textbf{classical Yang-Baxter equation (CYBE)}, which is to say that:
+        \begin{equation} \label{equation: CYBEs}
+            \CYBE(\calr) = 0
+        \end{equation}
+    (cf. equation \eqref{equation: classical_yang_baxter_tensor}). If, moreover, the classical r-matrix $\calr$ is \textbf{unitary}, meaning that:
+        \begin{equation} \label{equation: unitary_classical_r_matrices}
+            \Sym(\calr) = 0 \iff \calr_{1, 2} = -\calr_{2, 1}
+        \end{equation}
+    then the (coboundary) topological bialgebra $(\a, \delta, \calr)$ will be called \textbf{triangular}.
+\end{definition}
+\begin{example} \label{example: finite_dimensional_classical_doubles_are_quasi_triangular}
+    Consider a \textit{finite-dimensional} Lie bialgebra $(\a^+, \delta^+)$ along with its classical double $(\Dr(\a^+), \delta_{\Dr(\a^+)})$; recall also that there is a canonically induced Manin triple:
+        $$( \Dr(\a^+), \a^+, \a^- )$$
+    whose bilinear form we shall denote by:
+        $$(\cdot, \cdot)_{\Dr(\a^+)}$$
+    Then, its classical double $(\Dr(\a^+), \delta_{\Dr(\a^+)})$ (cf. remark \ref{remark: embeddings_into_classical_doubles}) will always carry a quasi-triangular structure. In particular, it can be shown that:
+        \begin{equation} \label{equation: quasi_triangularity_of_finite_dimensional_classical_doubles}
+            \delta_{\Dr(\a^+)} = [\Box, \calr_{\a^+, \a^-}]
+        \end{equation}
+    wherein $\calr_{\a^+, \a^-}$ is the canonical element of the pairing $(\cdot, \cdot)_{\Dr(\a^+)}$, i.e. the pullback of $\id_{\a}$ along the following composition:
+        $$\a^+ \hattensor \a^- \hookrightarrow \a \hattensor \a \hookrightarrow \End(\a)$$
+\end{example}

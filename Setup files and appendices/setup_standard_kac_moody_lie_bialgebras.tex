@@ -1,0 +1,42 @@
+\todo[inline]{Standard Kac-Moody Lie bialgebra structure coming from the Manin triple $(\g \oplus (\g^*)^{\op}, \g, (\g^*)^{\op})$. Here, $\g$ is identified with the diagonal of $\g \oplus (\g^*)^{\op}$.}
+
+\todo[inline]{Standard Borel Lie bialgebra structure. Relate this to the Lie bialgebra structure coming from $(\g \oplus (\g^*)^{\op}, \g, (\g^*)^{\op})$.}
+
+Let:
+    $$\b^{\pm} := \n^{\pm} \oplus \h$$
+be the \say{Borel subalgebras} of the Kac-Moody algebra $\g$. It is clear that these Lie subalgebras of $\g$ are not isotropic with respect to the Kac-Moody pairing $(\cdot, \cdot)_{\g}$ given by equation \eqref{equation: kac_moody_pairing}. However, one can consider instead the larger Lie algebra:
+    $$\a := \b^+ \oplus (\b^-)^{\op}$$
+into which $\b^{\pm}$ embed by means of the maps $\eta^{\pm}: \b^{\pm} \hookrightarrow \a$ given by:
+    \begin{equation} \label{equation: embeddings_into_classical_borel_double}
+        \eta^{\pm}(x) := x \oplus ( \pm x_{\h} ) \quad, \quad x \in \b^{\pm}
+    \end{equation}
+wherein $x_{\h}$ is the image of $x \in \b^{\pm}$ under the canonical quotient map $\b^{\pm} \to \b^{\pm}/\n^{\pm} \cong \h$. This larger Lie algebra shall be equipped with the non-degenerate and invariant pairing given by:
+    $$(\cdot, \cdot)_{\a} := (\cdot, \cdot)_{\g} - (\cdot, \cdot)_{\h}$$
+in which the Lie subalgebras $\eta^{\pm}(\b^{\pm})$ are clearly isotropic with respect to $(\cdot, \cdot)_{\a}$. As such, there is a Manin triple:
+    \begin{equation} \label{equation: standard_borel_manin_triple}
+        (\a, \eta^+(\b^+), \eta^-(\b^-)^{\op})
+    \end{equation}
+from which arises the topological Lie bialgebra structures $\delta^{\pm}: \b^{\pm} \to \b^{\pm} \hattensor \b^{\pm}$ given by:
+    $$\delta^{\pm} = [\Box, \calr]$$
+wherein $\calr$ is the Casimir tensor. On generators, these Lie cobrackets are given by:
+    \begin{equation} \label{equation: standard_borel_lie_bialgebra_structure}
+        \begin{gathered}
+            \delta^{\pm}(h) = 0 \quad, \quad h \in \h
+            \\
+            \delta^{\pm}(e_i^{\pm}) = \frac12 D_{i, i} e_i^{\pm} \wedge \alpha_i^{\vee} \quad, \quad 1 \leq i \leq n
+        \end{gathered}
+    \end{equation}
+\begin{remark}
+    Note also, that by construction, we have that:
+        $$\a \cong \Dr( \eta^+( \b^+ ) ) \cong \Dr(\eta^-(\b^-))^{\op, \cop}$$
+    as Lie bialgebras. See remark \ref{remark: embeddings_into_classical_doubles} for more details.
+\end{remark}
+    
+As a consequence of this construction, the Lie subalgebra $\h \subset \a$ is a Lie coideal on top of being a Lie ideal (this is trivial, for it is abelian), and hence the quotient:
+    $$\g \cong \a/\h$$
+carries a Lie bialgebra structure given by the same formulae as in \eqref{equation: standard_borel_lie_bialgebra_structure}.
+\begin{remark}
+    In fact, it is well-known that the formulae in \eqref{equation: standard_borel_lie_bialgebra_structure} lift to topological Lie bialgebra structures $\tilde{\delta}^{\pm}: \tilde{\b}^{\pm} \to \tilde{\b}^{\pm} \hattensor \tilde{\b}^{\pm}$ on the Borel subalgebras $\tilde{\b}^{\pm} := \h \oplus \tilde{\n}^{\pm}$, and hence also on the extended Kac-Moody algebra $\tilde{\g}$. This is a \textit{post hoc} construction, inspired by the construction of the Lie bialgebra structures on $\b^{\pm}$ described above, and it can also be shown, without much difficulty, that the Lie algebra $\tilde{\a} := \tilde{\b}^+ \oplus \tilde{\b}^-$ with the Lie cobracket given by $\tilde{\delta} := \tilde{\delta}^+ \oplus (-\tilde{\delta}^-)$ is isomorphic to the classical doubles $\Dr(\tilde{\b}^{\pm})$; note that the embeddings of $\tilde{\b}^{\pm}$ into this larger Lie bialgebra are given by the same formulae as in \eqref{equation: embeddings_into_classical_borel_double}. 
+
+    That said, the existence of such a Lie bialgebra structure on the extended Kac-Moody algebra $\tilde{\g}$ is very useful for formulating a quantisation of $\g$. See, for instance, \cite{etingof_kazhdan_quantisation_6}. 
+\end{remark}

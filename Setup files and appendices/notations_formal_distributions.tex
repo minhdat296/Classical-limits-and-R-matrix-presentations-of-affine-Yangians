@@ -1,0 +1,24 @@
+Given any formal distribution:
+    $$a(z) := \sum_{m \in \Z} a_m z^{-m} \in V[\![z^{\pm 1}]\!]$$
+with coefficients in some vector space $V$, let us write:
+    $$a(z)^+ := \sum_{m \geq 0} a_m z^{-m} \quad, \quad a(z)^- := \sum_{m < 0} a_m z^{-m}$$
+
+In order to avoid confusion with cobrackets, which are usually denoted by $\boldsymbol{\delta}$, we use:
+    $$\1(z) := \sum_{m \in \Z} z^{-m} \in \bbC[\![z^{\pm 1}]\!]$$
+to mean the formal Dirac distribution. Note that:
+    \begin{equation} \label{equation: positive_negative_dirac_delta_distributions}
+        \begin{gathered}
+            \1(z)^+ = \sum_{m \geq 0} z^{-m} = \frac{1}{1 - z^{-1}}
+            \\
+            \1(z)^- = \sum_{m < 0} z^{-m} = -1 + \sum_{m \geq 0} z^m - 1 = -1 + \frac{1}{1 - z} = \frac{z}{1 - z}
+        \end{gathered}
+    \end{equation}
+In particular, note that for $z = t_2/t_1$, we have:
+    $$
+        \begin{gathered}
+            \1(t_2/t_1)^+ = \frac{1}{1 - (t_2/t_1)^{-1}} = \frac{1}{1 - t_1/t_2} = \frac{t_2}{t_2 - t_1}
+            \\
+            \1(t_2/t_1)^- = \frac{t_2/t_1}{1 - t_2/t_1} = \frac{t_2}{t_1 - t_2} = -\frac{t_2}{t_2 - t_1}
+        \end{gathered}
+    $$
+which is a shorthand that we will use often for writing down Yangian cobrackets (see e.g. equation \ref{equation: finite_yangian_cobracket}).
