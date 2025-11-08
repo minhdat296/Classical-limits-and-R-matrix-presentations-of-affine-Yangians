@@ -121,12 +121,12 @@
                 \item $\divzero(A)$ is a Lie subalgebra of $\der(A)$ (with the usual commutator bracket).
                 \item $\divzero(A)$ admits the following subset as a basis:
                     $$\{D_{r, s}\}_{(r, s) \in \Z^2} \cup \{D_v, D_t\}$$
-                Its elements are given in terms of the partial derivatives $\del_{v} := \frac{\del}{\del v}$ and $\del_{t} := \frac{\del}{\del t}$ by:
+                Its elements are given in terms of the partial derivatives $\del_v := \frac{\del}{\del v}$ and $\del_t := \frac{\del}{\del t}$ by:
                     \begin{equation} \label{equation: div_zero_vector_fields_basis}
                         \begin{gathered}
-                            D_{r, s} := -s v^{-r + r_0 + 1} t^{-s + s_0} \del_{v} + r v^{-r + r_0} t^{-s + s_0 + 1} \del_{t}
+                            D_{r, s} := -s v^{-r + r_0 + 1} t^{-s + s_0} \del_v + r v^{-r + r_0} t^{-s + s_0 + 1} \del_t
                             \\
-                            D_v := -v^{r_0 + 1} t^{s_0} \del_{v} \quad, \quad D_t := -v^{r_0} t^{s_0 + 1} \del_{t}
+                            D_v := -v^{r_0 + 1} t^{s_0} \del_v \quad, \quad D_t := -v^{r_0} t^{s_0 + 1} \del_t
                         \end{gathered}
                     \end{equation}
                 \item The basis elements of $\divzero(A)$ satify the following commutation relations:
@@ -263,12 +263,12 @@
                 \begin{gathered}
                     \dot{\delta}_{\rational}^+(X) := \left[\Box(X), \dot{\calr}_{\rational} \right] \quad, \quad X \in \g[t]
                     \\
-                    \dot{\calr}_{\rational} := \calr \cdot t_2^{-1} \1(t_2/t_1)^+ = \frac{\calr}{t_2 - t_1}
+                    \dot{\calr}_{\rational} := \calr \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+ = \frac{\calr}{t_2 - t_1}
                 \end{gathered}
             \end{equation}
         wherein:
             $$\calr := \calr_{\g, (\g^*)^{\op}}$$
-        is the Casimir tensor\footnote{... or in other words, the canonical tensor of the non-degenerate bilinear form $(\cdot, \cdot)_{\Dr(\g)}$ that helps defines the standard Manin triple $( \Dr(\g), \g, (\g^*)^{\op} )$.} of $\g$, and $\1(t_2/t_1)^+$ is as in equation \eqref{equation: positive_negative_dirac_delta_distributions}.
+        is the Casimir tensor\footnote{... or in other words, the canonical tensor of the non-degenerate bilinear form $(\cdot, \cdot)_{\Dr(\g)}$ that helps defines the standard Manin triple $( \Dr(\g), \g, (\g^*)^{\op} )$.} of $\g$, and $\1\left( \frac{t_2}{t_1} \right)^+$ is as in equation \eqref{equation: positive_negative_dirac_delta_distributions}.
         
         \begin{remark}
             \begin{itemize}
@@ -282,7 +282,7 @@
 
         \begin{remark}[Classical limit of finite-type dual Yangians] \label{remark: finite_dual_yangian_cobracket} 
             From equation \eqref{equation: positive_negative_dirac_delta_distributions}, we know that:
-                $$\1(t_2/t_1)^- = -\1(t_2/t_1)^+$$
+                $$\1\left( \frac{t_2}{t_1} \right)^- = -\1\left( \frac{t_2}{t_1} \right)^+$$
             At the same time, we know that the ($\Z$-graded) dual cobracket:
                 $$\dot{\delta}_{\rational}^-: t^{-1}\g[t^{-1}] \to t_1^{-1}\g[t_1^{-1}] \tensor t_2\g[t_2]$$
             on $t^{-1}\g[t^{-1}] \cong \g[t]^{\star}$ is supposed to be given by:
@@ -292,7 +292,7 @@
                     \begin{aligned}
                         \dot{\delta}_{\rational}^-(Y) & = [\Box(Y), -\dot{\calr}_{\rational}]
                         \\
-                        & = [\Box(Y), \calr \cdot t_2^{-1} \1(t_2/t_1)^-]
+                        & = [\Box(Y), \calr \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^-]
                     \end{aligned}
                     \quad, \quad Y \in t^{-1}\g[t^{-1}]
                 \end{equation}
@@ -327,11 +327,15 @@
             \end{equation}
         with $K_{r, s}, c_v, c_t$ as in equation \eqref{equation: toroidal_centre_basis}. In turn, these explicit realisations for $\z_A^{\pm}$ tell us that:
             \begin{equation} \label{equation: positive_and_negative_div_zero_vector_fields}
-                \d_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC D_{r, s} \oplus \bbC D_v
+                \d_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC D_{-r, -s + s_0} \oplus \bbC D_t
                 \quad, \quad
-                \d_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{< 0}} \bbC D_{r, s} \oplus \bbC D_t
+                \d_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC D_{r, s} \oplus \bbC D_v
             \end{equation}
-        with $D_{r, s}, D_v, D_t$ as in equation \eqref{equation: div_zero_vector_fields_basis}.
+        with $D_{r, s}, D_v, D_t$ as in equation \eqref{equation: div_zero_vector_fields_basis}. Now, even though the constructions above are designed so that:
+            $$\extendedtoroidal_A = \extendedtoroidal_A^+ \oplus \extendedtoroidal_A^-$$
+        we must caution immediately, that it is \textit{not always true} that the following graded-duality:
+            $$(\extendedtoroidal_A^{\pm})^{\star} \cong \extendedtoroidal^{\mp}$$
+        via the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ holds. Rather, it turns out that this is the case if and only if this bilinear form is of degree $(r_0, s_0) = (0, -1)$.
                 
         \begin{proposition}[Extended toroidal Manin triples] \label{prop: extended_toroidal_manin_triples}
             The triple of Lie algebras:
@@ -353,7 +357,7 @@
                     $$( \z_A^{\pm}, \d_A^{\pm} )_{\extendedtoroidal_A} = 0$$
                 but at the same time, we have:
                     $$(\z_A^{\pm})^{\star} \cong \d_A^{\mp}$$
-                via the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$, with both being consequences of the fact that $\deg D_{r, s} = (-r + r_0, -s + s_0)$ and $\deg D_v = \deg D_t = (r_0, s_0)$ (see corollary \ref{coro: extended_toroidal_bilinear_forms}); therefore, $\extendedtoroidal_A^{\pm}$ are isotropic when regarded as subspaces of $\extendedtoroidal_A$.
+                via the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$, with both being consequences of the fact that $\deg D_{r, s} = (-r + r_0, -s + s_0) = (-r, -s - 1)$ and $\deg D_v = \deg D_t = (r_0, s_0) = (0, -1)$ (see corollary \ref{coro: extended_toroidal_bilinear_forms}); therefore, $\extendedtoroidal_A^{\pm}$ are isotropic when regarded as subspaces of $\extendedtoroidal_A$.
             \end{proof}
         \begin{remark}
             Primarily, we are interested in the case when the bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ has degree:
@@ -365,6 +369,8 @@
             which when quantised, will yield us two families of quantum groups, with the first being \say{Yangian-like} in both variables, while the second is \say{dual-Yangian-like} in the first variables while \say{Yangian-like} in the second variable. To our knowledge, such quantisations have never before been considered in the literature, but we will defer such considerations until later, for doing so would deviate too far from the scope of the current work.
         \end{remark}
 
+        In light of proposition \ref{prop: extended_toroidal_manin_triples}, let us assume henceforth that:
+            $$(r_0, s_0) = (0, -1)$$
         The $\Z^2$-graded Manin triple from proposition \ref{prop: extended_toroidal_manin_triples}, like all graded Manin triples, defines a $\Z^2$-graded Lie bialgebra structure:
             $$\ddot{\delta}_{\rational}^+: \extendedtoroidal_A^+ \to \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^+$$
         by means of the equation:
@@ -380,7 +386,7 @@
         thereby proving not only that $\ddot{\delta}_{\rational}^+: \extendedtoroidal_A^+ \to \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^+$ is a $\Z^2$-graded Lie bialgebra structure, but moreover, that it is coboundary. To do so, we shall have to demonstrate that $\CYBE(\ddot{\calr}_{\rational}) \in \left( \bigwedge^3 \extendedtoroidal_A \right)^{\extendedtoroidal_A}$; in fact, it will even be shown that $\CYBE(\ddot{\calr}_{\rational}) = 0$, thus proving that $\ddot{\delta}_{\rational}^+$ is quasi-triangular. In any event, however, the first step shall be to write down an explicit description of $\ddot{\calr}_{\rational}$. \textit{A priori}, this can be done by first choosing a basis:
             $$\{ J_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \subset \extendedtoroidal_A^+ \quad, \quad \deg J_{r, s} = (r, s)$$
         for the $\Z \x \Z_{\geq 0}$-graded Lie algebra $\extendedtoroidal_A^+$, and then a graded-dual basis:
-            $$\{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \subset \extendedtoroidal_A^- \quad, \quad \deg J_{r, s}^{\star} = (-r + r_0, -s + s_0)$$
+            $$\{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \subset \extendedtoroidal_A^- \quad, \quad \deg J_{r, s}^{\star} = (-r, -s - 1)$$
         (with respect to the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$), and then we shall get:
             \begin{equation} \label{equation: extended_toroidal_classical_r_matrices_general_form}
                 \ddot{\calr}_{\rational} = \sum_{(r, s) \in \Z \x \Z_{\geq 0}} J_{r, s} \tensor J_{r, s}^{\star}
@@ -394,16 +400,16 @@
                         \\
                         & \cup \left( \{ K_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ c_v \} \right)
                         \\
-                        & \cup \left( \{ D_{-r + r_0, -s + s_0} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t \} \right)
+                        & \cup \left( \{ D_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t \} \right)
                     \end{aligned}
                     \\
                     \{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\geq 0}} := 
                     \begin{aligned}
-                        & \{ (x_i v^r t^s)^{\star} = x_i^* v^{-r + r_0} t^{-s + s_0} \}_{1 \leq i \leq \dim \g, (r, s) \in \Z \x \Z_{\geq 0}}
+                        & \{ (x_i v^r t^s)^{\star} = x_i^* v^{-r} t^{-s - 1} \}_{1 \leq i \leq \dim \g, (r, s) \in \Z \x \Z_{\geq 0}}
                         \\
                         & \cup \left( \{ K_{r, s}^{\star} = D_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ c_v^{\star} = D_v \} \right)
                         \\
-                        & \cup \left( \{ D_{-r + r_0, -s + s_0}^{\star} = K_{r - r_0, s - s_0} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t^{\star} = c_t \} \right)
+                        & \cup \left( \{ D_{-r, -s - 1}^{\star} = K_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t^{\star} = c_t \} \right)
                     \end{aligned}
                 \end{gathered}
             $$
@@ -418,28 +424,39 @@
                     \begin{aligned}
                         & \sum_{(r, s) \in \Z \x \Z_{\geq 0}} x_i v_1^r t_1^s \tensor (x_i v_2^r t_2^s)^{\star}
                         \\
-                        & + \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor K_{r, s}^{\star} + c_{v_1} \tensor c_{v_2}^{\star} \right)
-                        \\
-                        & + \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r + r_0, -s + s_0} \tensor D_{-r + r_0, -s + s_0}^{\star} + D_{t_1} \tensor D_{t_2}^{\star} \right)
+                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor K_{r, s}^{\star} + c_{v_1} \tensor c_{v_2}^{\star} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r, -s - 1} \tensor D_{-r, -s - 1}^{\star} + D_{t_1} \tensor D_{t_2}^{\star} \right)
                     \end{aligned}
                     \\
                     & = 
                     \begin{aligned}
-                        & \calr \cdot v_2^{r_0} \1(v_2/v_1) t_2^{s_0} \1(t_2/t_1)^+
+                        & \calr \cdot \1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+
                         \\
-                        & + \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor D_{r, s} + c_{v_1} \tensor D_{v_2} \right)
-                        \\
-                        & + \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r + r_0, -s + s_0} \tensor K_{-r + r_0, -s + s_0} + D_{t_1} \tensor c_{t_2} \right)
+                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor D_{r, s} + c_{v_1} \tensor D_{v_2} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r, -s - 1} \tensor K_{-r, -s - 1} + D_{t_1} \tensor c_{t_2} \right)
                     \end{aligned}
                 \end{aligned}
             $$
+        Using the explicit formulae for the elements $K_{r, s}, c_v, c_t$ (cf. equation \eqref{equation: toroidal_centre_basis}) and $D_{r, s}, D_v, D_t$ (cf. equation \eqref{equation: div_zero_vector_fields_basis}), we get\footnote{Recall also that $\1\left( \frac{t_2}{t_1} \right)^- = -\1\left( \frac{t_2}{t_1} \right)^+$ (cf. equation \eqref{equation: positive_negative_dirac_delta_distributions}).}:
+            $$
+                \begin{aligned}
+                    & \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor D_{r, s}
+                    \\
+                    & = \sum_{(r, s) \in \Z \x \Z_{> 0}} K_{r, s} \tensor D_{r, s} + \sum_{(r, s) \in \Z \x \{0\}} K_{0, s} \tensor D_{0, s}
+                    \\
+                    & = \sum_{(r, s) \in \Z \x \Z_{> 0}} \frac1s v_1^{r - 1} t_1^s \bar{d}v_1 \tensor \left( -s v_2^{-r + 1} t_2^{-s - 1} \del_{v_2} + r v_2^{-r} t_2^{-s} \del_{t_2} \right) + \sum_{r \in \Z} \left( -\frac1r v_1^r t_1^{-1} \bar{d}t_1 \right) \tensor r v_2^{-r} \del_{t_2}
+                    \\
+                    & = -\1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^- \bar{d}v_1 \tensor \del_{v_2} + \del_{v_1}\1\left(\frac{v_2}{v_1}\right) [...] \bar{d}v_1 \tensor \del_{t_2} - \1\left( \frac{v_2}{v_1} \right) t_1^{-1} \bar{d}t_1 \tensor \del_{t_2}
+                    \\
+                    & = \1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+ \bar{d}v_1 \tensor \del_{v_2} + [...] - \1\left( \frac{v_2}{v_1} \right) t_1^{-1} \bar{d}t_1 \tensor \del_{t_2}
+                \end{aligned}
+            $$
+            
         \begin{theorem}[Extended toroidal Lie bialgebras] \label{theorem: extended_toroidal_lie_bialgebras}
             Suppose that:
                 $$(r_0, s_0) = (0, -1)$$
             \begin{enumerate}
                 \item The canonical tensor for the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ is given explicitly by the following formula:
                     \begin{equation} \label{equation: extended_toroidal_classical_r_matrices}
-                        \ddot{\calr}_{\rational} = (\calr + [...]) \cdot v_2^{r_0} \1(v_1 v_2^{-1}) t_2^{s_0} \1(t_1/t_2)^+ + \ddot{\calr}_v + \ddot{\calr}_t
+                        \ddot{\calr}_{\rational} = (\calr + [...]) \cdot v_2 \1(v_1 v_2^{-1}) t_2^{-1} \1(t_1/t_2)^+ + \ddot{\calr}_v + \ddot{\calr}_t
                     \end{equation}
                 \item Moreover, the $2$-tensor $\ddot{\calr}_{\rational} \in \extendedtoroidal_A \tensor \extendedtoroidal_A$ as in equation \eqref{equation: extended_toroidal_classical_r_matrices} above satisfies the CYBE \eqref{equation: CYBEs}, i.e. we have:
                     $$\CYBE( \ddot{\calr}_{\rational} ) = 0$$
