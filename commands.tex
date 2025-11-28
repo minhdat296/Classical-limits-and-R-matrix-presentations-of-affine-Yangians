@@ -16,6 +16,7 @@
 \newcommand\ket[2][]{#1\lvert {#2} #1\rangle}
 \newcommand\abs[2][]{#1\left\lvert {#2} #1\right\rvert}
 \newcommand\norm[2][]{#1\left\| {#2} #1\right\|}
+\newcommand\schouten[2][]{#1\left[ \! \left[ {#2} #1\right] \! \right]}
 \newcommand\order[2][]{#1\: \mathbf{:} \: {#2} #1 \: \mathbf{:} \:}
 \newcommand{\ndiv}{\hspace{-2pt}\not|\hspace{5pt}}
 \newcommand{\cond}{\blacktriangle}
@@ -47,12 +48,18 @@
 }
 \makeatother
 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
+\DeclareFontFamily{U}{stix2bb}{\skewchar\font200 }
+\DeclareFontShape{U}{stix2bb}{m}{n} {<-> stix2-mathbb}{}
+\DeclareMathAlphabet{\mathbbm}{U}{stix2bb}{m}{n}
+
+\newcommand{\N}{\mathbbm{N}}
+\newcommand{\Z}{\mathbbm{Z}}
+\newcommand{\Q}{\mathbbm{Q}}
+\newcommand{\R}{\mathbbm{R}}
 \newcommand{\bbC}{\mathbb{C}}
-\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbk}{ \mathbbm{k} }
+\newcommand{\bbK}{\mathbbm{K}}
+\newcommand{\F}{\mathbbm{F}}
 \NewDocumentCommand{\x}{e{_^}}{%
   \mathbin{\mathop{\times}\displaylimits
     \IfValueT{#1}{_{#1}}
@@ -105,7 +112,6 @@
 \newcommand{\calF}{\mathcal{F}}
 \newcommand{\calG}{\mathcal{G}}
 \newcommand{\calO}{\mathcal{O}}
-\newcommand{\F}{\mathbb{F}}
 \DeclareMathOperator{\lcm}{lcm}
 \newcommand{\gr}{\operatorname{gr}}
 \newcommand{\vol}{\mathrm{vol}}
@@ -250,6 +256,7 @@
 \newcommand{\Graphs}{\mathrm{Graphs}}
 \newcommand{\Lie}{\mathrm{Lie}}
 \newcommand{\Env}{\mathrm{Env}}
+\newcommand{\CE}{\operatorname{CE}} %chevalley-eilenberg complex
 \newcommand{\Ho}{\mathrm{Ho}}
 \newcommand{\rmD}{\mathrm{D}}
 \newcommand{\Cov}{\mathrm{Cov}}
@@ -412,7 +419,7 @@
 \newcommand{\const}{\operatorname{const}}
 \newcommand{\free}{\operatorname{free}}
 \newcommand{\adrep}{\operatorname{ad}} %adjoint representation
-\newcommand{\NL}{\mathbb{NL}} %naive cotangent complex
+\newcommand{\NL}{\mathbbm{NL}} %naive cotangent complex
 \newcommand{\pr}{\operatorname{pr}}
 \newcommand{\Der}{\operatorname{Der}}
 \newcommand{\Frob}{\operatorname{Fr}} %Frobenius
@@ -445,9 +452,9 @@
 \newcommand{\Ran}{\operatorname{Ran}} %Ran space
 \newcommand{\quantumfields}{\operatorname{QFld}}
 
-\newcommand{\bbU}{\mathbb{U}}
-\newcommand{\bbV}{\mathbb{V}}
-\newcommand{\W}{\mathbb{W}}
+\newcommand{\bbU}{\mathbbm{U}}
+\newcommand{\bbV}{\mathbbm{V}}
+\newcommand{\W}{\mathbbm{W}}
 \newcommand{\calU}{\mathcal{U}}
 \newcommand{\calu}{\mathcal{u}}
 \newcommand{\calW}{\mathcal{W}}
@@ -461,8 +468,8 @@
 \newcommand{\calN}{\mathcal{N}}
 \newcommand{\calP}{\mathcal{P}}
 \newcommand{\calQ}{\mathcal{Q}}
-\newcommand{\A}{\mathbb{A}}
-\renewcommand{\P}{\mathbb{P}}
+\newcommand{\A}{\mathbbm{A}}
+\renewcommand{\P}{\mathbbm{P}}
 \newcommand{\calL}{\mathcal{L}}
 \newcommand{\scrL}{\mathscr{L}}
 \newcommand{\E}{\mathcal{E}}
@@ -483,11 +490,11 @@
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\calB}{\mathcal{B}}
 \renewcommand{\S}{\mathcal{S}}
-\newcommand{\B}{\mathbb{B}}
-\newcommand{\bbD}{\mathbb{D}}
-\newcommand{\G}{\mathbb{G}}
+\newcommand{\B}{\mathbbm{B}}
+\newcommand{\bbD}{\mathbbm{D}}
+\newcommand{\G}{\mathbbm{G}}
 \newcommand{\horn}{\mathbf{\Lambda}}
-\renewcommand{\L}{\mathbb{L}}
+\renewcommand{\L}{\mathbbm{L}}
 \renewcommand{\a}{\mathfrak{a}}
 \renewcommand{\b}{\mathfrak{b}}
 \renewcommand{\c}{\mathfrak{c}}
@@ -502,7 +509,7 @@
 \newcommand{\frakv}{\mathfrak{v}}
 \newcommand{\frakw}{\mathfrak{w}}
 \newcommand{\frake}{\mathfrak{e}}
-\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbX}{\mathbbm{X}}
 \newcommand{\frakG}{\mathfrak{G}}
 \newcommand{\frakH}{\mathfrak{H}}
 \newcommand{\frakE}{\mathfrak{E}}
@@ -514,9 +521,9 @@
 \newcommand{\fraki}{\mathfrak{i}}
 \newcommand{\frakj}{\mathfrak{j}}
 \newcommand{\del}{\partial}
-\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbE}{\mathbbm{E}}
 \newcommand{\scrO}{\mathscr{O}}
-\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbO}{\mathbbm{O}}
 \newcommand{\scrA}{\mathscr{A}}
 \newcommand{\scrB}{\mathscr{B}}
 \newcommand{\scrE}{\mathscr{E}}
@@ -536,11 +543,11 @@
 \newcommand{\scrK}{\mathscr{K}}
 \newcommand{\scrV}{\mathscr{V}}
 \newcommand{\scrW}{\mathscr{W}}
-\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbS}{\mathbbm{S}}
 \newcommand{\bfA}{\mathbf{A}}
 \newcommand{\bfB}{\mathbf{B}}
 \newcommand{\bfC}{\mathbf{C}}
-\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\O}{\mathbbm{O}}
 \newcommand{\calV}{\mathcal{V}}
 \newcommand{\scrR}{\mathscr{R}} %radical
 \newcommand{\sfR}{\mathsf{R}} %quantum R-matrices
@@ -569,6 +576,7 @@
 \newcommand{\rmA}{\mathrm{A}}
 \newcommand{\rmB}{\mathrm{B}}
 \newcommand{\calT}{\mathcal{T}}
+\newcommand{\calt}{\mathcal{t}}
 \newcommand{\sfA}{\mathsf{A}}
 \newcommand{\sfB}{\mathsf{B}}
 \newcommand{\sfC}{\mathsf{C}}

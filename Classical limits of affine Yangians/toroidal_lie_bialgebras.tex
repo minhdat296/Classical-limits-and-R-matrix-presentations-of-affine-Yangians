@@ -1,44 +1,44 @@
 \section{Toroidal Lie (bi)algebras}
     \subsection{(Extended) toroidal Lie algebras}
-        Let us begin by recalling the following description of universal central extensions (UCEs) of current algebras, i.e. of Lie algebras of the form $\g \tensor A$ wherein $A$ is a commutative algebra, due to Kassel. For a self-contained but comprehensive account of the following facts, we direct the reader to \cite[Section 2.2]{msc_thesis_gamma_extended_toroidal_lie_algebras}.
+        Let us begin by recalling the following description of universal central extensions (UCEs) of current algebras, i.e. of Lie algebras of the form $\bar{\g} \tensor A$ wherein $A$ is a commutative algebra, due to Kassel. For a self-contained but comprehensive account of the following facts, we direct the reader to \cite[Section 2.2]{msc_thesis_gamma_extended_toroidal_lie_algebras}.
         
-        First of all, for brevity, let us write $xf$ to denote the pure tensors $x \tensor f \in \g \tensor A$. On $\g \tensor A$, the Lie algebra structure is given by:
+        First of all, for brevity, let us write $xf$ to denote the pure tensors $x \tensor f \in \bar{\g} \tensor A$. On $\bar{\g} \tensor A$, the Lie algebra structure is given by:
             \begin{equation} \label{equation: current_algebra_brackets}
-                [xf, yg]_{\g \tensor A} := [x, y]_{\g} fg
+                [xf, yg]_{\bar{\g} \tensor A} := [x, y]_{\bar{\g}} fg
             \end{equation}
-        It is worth noting, that with this Lie bracket, $\g \tensor A$ is a perfect Lie algebra\footnote{A Lie algebra is said to be perfect if it is equal to its derived subalgebra.} as a consequence of the simplicity of the Lie algebra $\g$ that we assumed from before. This fact is important because Lie algebras are perfect if and only if they admit UCEs (see \cite[Lemma 1.10]{garland_arithmetics_of_loop_groups}); for a perfect Lie algebra $\a$, we denote its UCE by $\uce(\a)$. It is also desirable to have a description of the structure of $\toroidal_A$, and since:
-            $$\toroidal_A := \uce(\g \tensor A) \cong ( \g \tensor A ) \oplus^{\e} \z_A$$
-        wherein $\e: \bigwedge^2 (\g \tensor A) \to \z_A$ is the universal Lie $2$-cocycle with values in the centre $\z_A := \z( \toroidal_A )$, it suffices to give a more detailed description of the centre. In \cite{kassel_universal_central_extensions_of_lie_algebras}, Kassel demonstrated via the use of cyclic cohomology, that the centre can be given via:
-            $$\z_A \cong \bar{\Omega}^1_A := \Omega^1_A/dA \quad, \quad \e(xf, yg) := (x, y)_{\g} g \bar{d}f$$
+        It is worth noting, that with this Lie bracket, $\bar{\g} \tensor A$ is a perfect Lie algebra\footnote{A Lie algebra is said to be perfect if it is equal to its derived subalgebra.} as a consequence of the simplicity of the Lie algebra $\bar{\g}$ that we assumed from before. This fact is important because Lie algebras are perfect if and only if they admit UCEs (see \cite[Lemma 1.10]{garland_arithmetics_of_loop_groups}); for a perfect Lie algebra $\a$, we denote its UCE by $\uce(\a)$. It is also desirable to have a description of the structure of $\toroidal_A$, and since:
+            $$\toroidal_A := \uce(\bar{\g} \tensor A) \cong ( \bar{\g} \tensor A ) \oplus^{\e} \z_A$$
+        wherein $\e: \bigwedge^2 (\bar{\g} \tensor A) \to \z_A$ is the universal Lie $2$-cocycle with values in the centre $\z_A := \z( \toroidal_A )$, it suffices to give a more detailed description of the centre. In \cite{kassel_universal_central_extensions_of_lie_algebras}, Kassel demonstrated via the use of cyclic cohomology, that the centre can be given via:
+            $$\z_A \cong \bar{\Omega}^1_A := \Omega^1_A/dA \quad, \quad \e(xf, yg) := (x, y)_{\bar{\g}} g \bar{d}f$$
         wherein $\Omega^1_A$ denotes the $A$-module of algebraic $1$-forms on $A$, regarded here as a $\bbC$-vector space, $d: A \to \Omega^1_A$ is the initial object in the category of $A$-module homomorphisms $d': A \to \Omega'$ such that $d'(fg) = fdg + gdf$ (see \cite[\href{https://stacks.math.columbia.edu/tag/00RM}{Tag 00RM}]{stacks-project} for more details), and we have written:
             $$\bar{d}f \in \bar{\Omega}^1_A$$
         for the image of $df \in \Omega^1_A$ under the canonical quotient map $\Omega^1_A \to \bar{\Omega}^1_A$. In particular, this implies that the non-trivial commutators in $\toroidal_A$ are given by the following formula:
             \begin{equation} \label{equation: toroidal_lie_algebra_commutators}
                 \begin{aligned}
-                    [xf, yg]_{\toroidal_A} & = [xf yg]_{\g \tensor A} + \e(xf, yg)
+                    [xf, yg]_{\toroidal_A} & = [xf yg]_{\bar{\g} \tensor A} + \e(xf, yg)
                     \\
-                    & = [x, y]_{\g} fg + (x, y)_{\g} g \bar{d}f
+                    & = [x, y]_{\bar{\g}} fg + (x, y)_{\bar{\g}} g \bar{d}f
                 \end{aligned}
                 \quad, \quad
-                x, y \in \g, f, g \in A
+                x, y \in \bar{\g}, f, g \in A
             \end{equation}
 
-        More can be said when $A$ is graded by some abelian group $Z$, say $A := \bigoplus_{n \in Z} A_n$. In this case, $\g \tensor A$ and $\Omega^1_A$ carry an induced $Z$-grading given by:
-            $$\g \tensor A = \bigoplus_{n \in Z} (\g \tensor A)_n \quad, \quad (\g \tensor A)_n := \g \tensor A_n$$
+        More can be said when $A$ is graded by some abelian group $Z$, say $A := \bigoplus_{n \in Z} A_n$. In this case, $\bar{\g} \tensor A$ and $\Omega^1_A$ carry an induced $Z$-grading given by:
+            $$\bar{\g} \tensor A = \bigoplus_{n \in Z} (\bar{\g} \tensor A)_n \quad, \quad (\bar{\g} \tensor A)_n := \bar{\g} \tensor A_n$$
             $$\Omega^1_A = \bigoplus_{n \in Z} (\Omega^1_A)_n \quad, \quad (\Omega^1_A)_n := \bigoplus_{ \substack{i, j \in Z\\i + j = n} } \frac{A_i \tensor A_j}{ \< \forall x_i \in A_i, x_j \in A_j: x_i x_j \tensor 1 - x_i \tensor 1 - 1 \tensor x_j = 0 \> }$$
         Together, these two induced $Z$-gradings induce a further $Z$-grading on $\toroidal_A$, determined by:
             $$\bar{\Omega}^1_A := \bigoplus_{n \in Z} ( \bar{\Omega}^1_A )_n, \quad, \quad ( \bar{\Omega}^1_A )_n := ( \Omega^1_A )_n/dA_n$$
-        At the same time, for a distinguished element $n_0 \in Z$, one can define a symmetric, non-degenerate, and invariant bilinear form on $\g \tensor A$ given by:
+        At the same time, for a distinguished element $n_0 \in Z$, one can define a symmetric, non-degenerate, and invariant bilinear form on $\bar{\g} \tensor A$ given by:
             \begin{equation} \label{equation: current_algebra_pairing}
-                (x f, y g)_{\g \tensor A} := (x, y)_{\g} \delta_{ \deg f + \deg g, n_0 }
+                (x f, y g)_{\bar{\g} \tensor A} := (x, y)_{\bar{\g}} \1_{ \deg f + \deg g, n_0 }
             \end{equation}
         This form extends naturally to $\toroidal_A$, though by invariance, this extension does not retain the non-degeneracy property: in fact, it is easy to show that the radical of this extended bilinear form - which shall be denoted by $(\cdot, \cdot)_{\toroidal_A}$ - is precisely the centre $\z_A$.
 
-        The fact that the bilinear form $(\cdot, \cdot)_{\toroidal_A}$ is no longer non-degenerate prompts us to enlarge $\toroidal_A$ by a vector space $\d_A$, i.e. we form:
-            $$\extendedtoroidal_A := \toroidal_A \oplus \d_A$$
-        in such a way that the extension of the bilinear form $(\cdot, \cdot)_{\toroidal_A}$ to $\extendedtoroidal_A$, which shall be denoted by:
-            $$(\cdot, \cdot)_{\extendedtoroidal_A}$$
-        becomes non-degenerate. This means that the bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ is to pair $\d_A$ non-degenerately with $\z_A$, and in order to construct such a bilinear form, let us take:
+        This dengeracy of the bilinear form $(\cdot, \cdot)_{\toroidal_A}$ creates an obstacle for us, however. The theory of Manin triples (see e.g. \cite{etingof_kazhdan_quantisation_1}) tells us that it is necessary to have a non-degenerate, symmetric, and invariant bilinear form, yet we know that $(\cdot, \cdot)_{\toroidal_A}$ is \textit{degenerate}. That said, we can enlarge $\toroidal_A$ in such a way that the extra elements pair non-degenerately with those of $\z_A$, which are the very ones causing the degeneracy issue for $(\cdot, \cdot)_{\toroidal_A}$. In subsection \ref{subsection: toroidal_lie_bialgebras} below, we shall show that $\toroidal_A$ can be acted upon by a certain Lie subalgebra $\d_A$ of the vector field Lie algebra $\der(A)$, so as to give rise to Lie algebra extensions:
+            $$0 \to \toroidal_A \to \extendedtoroidal_A \to \d_A \to 0$$
+        In particular, this implies that $\toroidal_A$ is a Lie subalgebra of the enlargement $\extendedtoroidal_A$.
+        
+        If we let $(\cdot, \cdot)_{\extendedtoroidal_A}$ denote the extension of $(\cdot, \cdot)_{\toroidal_A}$ to $\extendedtoroidal_A$, then per the outline above, the former will have to pair $\d_A$ non-degenerately with $\z_A$. In order to construct such a bilinear form, let us take:
             $$\d_A := \z_A^{\star}$$
         where $\z_A^{\star} := \bigoplus_{(r, s) \in \Z^2} (\z_A)_{(r, s)}^*$ is the graded dual.
         \begin{lemma}[A non-degenerate bilinear form extending $(\cdot, \cdot)_{\toroidal}$] \label{lemma: extended_toroidal_bilinear_form}
@@ -62,13 +62,18 @@
             $$A := \bbC[v^{\pm 1}, t^{\pm 1}]$$
         We shall let the grading abelian group be:
             $$Z := \Z^2$$
-        and the cases that we shall consider are when the distinguished element $n_0 := (r_0, s_0) \in \Z^2$ are:
-            $$(r_0, s_0) = (0, -1) \quad, \quad \text{and} \quad, \quad (r_0, s_0) = (0, 0)$$
-        The reason for this is that in these cases, $\toroidal_A$ is to be the classical limits of - respectively - the centrally extended double Yangian associated to the affine Kac-Moody algebra $\hat{\g}$ associated to $\g$ (i.e. the Lie affinisation of $\g$) and the quantum toroidal algebra associated to $\g$ (i.e. the quantum affinisation associated to $\hat{\g}$). We expect the latter to somehow \say{degenerate} to the former, so it is important to analyse the relationship between their classical limits as well.
+        \begin{remark}
+            The cases that we most interested in are when the distinguished element $n_0 := (r_0, s_0) \in \Z^2$ are:
+                $$(r_0, s_0) = (0, -1) \quad, \quad \text{and} \quad, \quad (r_0, s_0) = (0, 0)$$
+            The reason for this is that in these cases, $\toroidal_A$ is to be the classical limits -respectively - of:
+            \begin{enumerate}
+                \item the double Yangian associated to the affine Kac-Moody algebra $\g$ associated to $\bar{\g}$ (i.e. the affinisation of $\bar{\g}$), and
+                \item the quantum toroidal algebra associated to $\bar{\g}$ (i.e. the quantum affinisation associated to $\g$).
+            \end{enumerate}
+            We expect the latter to somehow \say{degenerate} to the former\footnote{Not quite, since quantum toroidal algebras should degenerate to affine Yangians, not affine double Yangians, but we lack the language to phrase this rigorously at the moment.}, so it is important to analyse the relationship between their classical limits as well.
+        \end{remark}
 
-        Before we can do that, though, we must endow $\toroidal_A$ with a Lie bialgebra structure. There is, however, an obstacle: the theory of Manin triples (see e.g. \cite{etingof_kazhdan_quantisation_1}) tells us that it is necessary to have a non-degenerate, symmetric, and invariant bilinear form, yet we know that $(\cdot, \cdot)_{\toroidal_A}$ is \textit{degenerate}. That said, we do have a non-degenerate, symmetric, and invariant bilinear form on the larger Lie algebra $\extendedtoroidal_A$, namely $(\cdot, \cdot)_{\extendedtoroidal_A}$, meaning that we can construct a Lie bialgebra structure on $\extendedtoroidal_A$ instead. We shall then show in subsection \ref{subsection: toroidal_lie_bialgebras} that $\toroidal_A$ is a Lie sub-bialgebra of $\extendedtoroidal_A$.
-
-        Let us now recall the explicit structures of $\extendedtoroidal_A$ in the two cases mentioned above. Our main reference is \cite{msc_thesis_gamma_extended_toroidal_lie_algebras}. First of all, let us describe a specific basis for $\z_A$. This was first done in \cite{moody_rao_yokonuma_vertex_representations_of_toroidal_lie_algebras}, but as many details were omitted in \textit{loc. cit.} (presumably because the material is well-known to experts), and for notational consistency, let us follow the presentation in \cite[Subsection 2.3.3]{msc_thesis_gamma_extended_toroidal_lie_algebras}. Through the induced $\Z^2$-grading on $\Omega^1_A$, and hence also on $\bar{\Omega}^1_A$, one can write:
+        Let us now recall the construction of $\d_A$, and then of $\extendedtoroidal_A$. Our main reference is \cite{msc_thesis_gamma_extended_toroidal_lie_algebras}. First of all, let us describe a specific basis for $\z_A$. This was first done in \cite{moody_rao_yokonuma_vertex_representations_of_toroidal_lie_algebras}, but as many details were omitted in \textit{loc. cit.} (presumably because the material is well-known to experts), and for notational consistency, let us follow the presentation in \cite[Subsection 2.3.3]{msc_thesis_gamma_extended_toroidal_lie_algebras}. Through the induced $\Z^2$-grading on $\Omega^1_A$, and hence also on $\bar{\Omega}^1_A$, one can write:
             $$\z_A \cong \bigoplus_{(r, s) \in \Z^2} \bbC K_{r, s} \oplus \bbC c_v \oplus \bbC c_t$$
         wherein the basis elements are given by:
             \begin{equation} \label{equation: toroidal_centre_basis}
@@ -90,7 +95,7 @@
         Moreover, any element of the form:
             $$v^n t^q \bar{d}(v^m t^p) \in \z_A$$
         can be written in terms of the basis vectors $K_{r, s}, c_v, c_t$ in the following manner:
-            $$v^n t^q \bar{d}(v^m t^p) = (mq - np) K_{m + n, p + q} + \delta_{(m, p) + (n, q), (0, 0)} ( m c_v + p c_t )$$
+            $$v^n t^q \bar{d}(v^m t^p) = (mq - np) K_{m + n, p + q} + \1_{(m, p) + (n, q), (0, 0)} ( m c_v + p c_t )$$
         (cf. \cite[p. 35]{wendlandt_formal_shift_operators_on_yangian_doubles}).
         \begin{remark}[The centre of $\extendedtoroidal_A$]
             Let us caution the reader, that $\z_A$ is in fact \textit{not} the centre of the extended Lie algebra $\extendedtoroidal_A$. Rather, the centre of $\extendedtoroidal_A$ is considerably smaller. In particular, when $A = \bbC[v^{\pm 1}, t^{\pm 1}]$, it can be shown that the centre of the extended toroidal Lie algebra $\extendedtoroidal_A$ is given by:
@@ -112,7 +117,7 @@
         \end{definition}
         \begin{remark}
             Note that the linear map $\gamma: A \to \bbC$ helps us recover the bilinear form \eqref{equation: current_algebra_pairing} in the following manner:
-                $$(xf, yg)_{\g \tensor A} = (x, y)_{\g} \gamma(fg) \quad, \quad x, y \in \g, f, g \in A$$
+                $$(xf, yg)_{\bar{\g} \tensor A} = (x, y)_{\bar{\g}} \gamma(fg) \quad, \quad x, y \in \bar{\g}, f, g \in A$$
         \end{remark}
 
         \begin{lemma} \label{lemma: div_zero_vector_fields_basic_properties}
@@ -191,7 +196,7 @@
             by Lie derivations, given for all $D \in \der(A)$ by the following formulae:
                 \begin{equation} \label{equation: vector_field_action_on_toroidal_lie_algebras}
                     \begin{gathered}
-                        \rho(D)( xf ) := x D(f) \quad, \quad x \in \g, f \in A
+                        \rho(D)( xf ) := x D(f) \quad, \quad x \in \bar{\g}, f \in A
                         \\
                         \rho( g\bar{d}f ) := D(g) \bar{d}f + g \bar{d}(D(f)) \quad, \quad f, g \in A
                     \end{gathered}
@@ -218,7 +223,7 @@
                             \begin{aligned}
                                 & \left( (b + s_0)r - s(a + r_0) \right) K_{a - r + r_0, b - s + s_0}
                                 \\
-                                & + \delta_{(r - r_0, s - s_0), (a, b)} \left( r c_v + s c_t \right)
+                                & + \1_{(r - r_0, s - s_0), (a, b)} \left( r c_v + s c_t \right)
                             \end{aligned}
                             \\
                             [D_v, K_{a, b}]_{\extendedtoroidal_A} = a K_{a + r_0, b + s_0}
@@ -238,45 +243,45 @@
     \subsection{Lie bialgebra structures on (extended) toroidal Lie algebras} \label{subsection: toroidal_lie_bialgebras}
         The central that we are trying to answer is the following.
         \begin{question} \label{question: classical_limit_of_affine_yangians}
-            What is the classical limit of the coproduct structures on the Yangian of the untwisted affine Kac-Moody algebra $\hat{\g}$ that were constructed in \cite{guay_nakajima_wendlandt_affine_yangian_coproduct} and in \cite{ueda_coproduct_for_the_yangian_of_twisted_affine_type_A2}?
+            What is the classical limit of the coproduct structures on the Yangian of the untwisted affine Kac-Moody algebra $\g$ that were constructed in \cite{guay_nakajima_wendlandt_affine_yangian_coproduct} and in \cite{ueda_coproduct_for_the_yangian_of_twisted_affine_type_A2}?
         \end{question}
-        Issues of when such coproduct structures are defined aside (there are certain complications in type $\sfA_1^{(1)}$) and when the affine Yangian is even a flat deformation to begin with (so far, this is known to be true only when $\hat{\g}$ is simply laced), so that we can be assured that inquiring about the classical limit is even a well-posed question to begin with, we ought to begin answering question \ref{question: classical_limit_of_affine_yangians} by constructing some Lie bialgebra structure which can be nominated as a candidate for being the classical limit of the affine Yangian.
+        Issues of when such coproduct structures are defined aside (there are certain complications in type $\sfA_1^{(1)}$) and when the affine Yangian is even a flat deformation to begin with (so far, this is known to be true only when $\g$ is simply laced), so that we can be assured that inquiring about the classical limit is even a well-posed question to begin with, we ought to begin answering question \ref{question: classical_limit_of_affine_yangians} by constructing some Lie bialgebra structure which can be nominated as a candidate for being the classical limit of the affine Yangian.
         
-        Constructing Lie bialgebras begins with constructing Manin triples, and let us inspiration from the construction of the finite-type Yangian associated to $\g$. Recall that this is the\footnote{The uniqueness of the Yangian has recently been confirmed in \cite{gautam_wendlandt_xu_yangian_uniqueness}.} quantisation of a certain Lie bialgebra structure on the current algebra $\g[t] := \g \tensor \bbC[t]$. This Lie bialgebra structure comes from the $\Z$-graded Manin triple:
+        Constructing Lie bialgebras begins with constructing Manin triples, and let us inspiration from the construction of the finite-type Yangian associated to $\bar{\g}$. Recall that this is the\footnote{The uniqueness of the Yangian has recently been confirmed in \cite{gautam_wendlandt_xu_yangian_uniqueness}.} quantisation of a certain Lie bialgebra structure on the current algebra $\bar{\g}[t] := \bar{\g} \tensor \bbC[t]$. This Lie bialgebra structure comes from the $\Z$-graded Manin triple:
             \begin{equation} \label{equation: finite_yangian_manin_triples}
-                \left( \g[t^{\pm 1}], \g[t], t^{-1}\g[t^{-1}] \right)
+                \left( \bar{\g}[t^{\pm 1}], \bar{\g}[t], t^{-1}\bar{\g}[t^{-1}] \right)
             \end{equation}
         wherein:
         \begin{itemize}
-            \item the Lie algebra structure on $\g[t^{\pm 1}] := \g \tensor \bbC[t^{\pm 1}]$ is given as in equation \eqref{equation: current_algebra_brackets}, and $\g[t]$ and $t^{-1}\g[t^{-1}] := \g \tensor t^{-1}\bbC[t^{-1}]$ are Lie subalgebras of $\g[t^{\pm 1}]$ in the canonical manner,
-            \item the symmetric, non-degenerate, and invariant bilinear form $(\cdot, \cdot)_{\g[t^{\pm}]}$ on $\g[t^{\pm}]$ is given as in equation \eqref{equation: current_algebra_pairing}, with $Z := \Z$ and $n_0 := -1$, and one checks that the Lie subalgebras $\g[t]$ and $t^{-1}\g[t^{-1}]$ are (maximally) isotropic with respect to this bilinear form,
-            \item $\g[t]$ is regarded as a $\Z$-graded Lie algebra by means of:
+            \item the Lie algebra structure on $\bar{\g}[t^{\pm 1}] := \bar{\g} \tensor \bbC[t^{\pm 1}]$ is given as in equation \eqref{equation: current_algebra_brackets}, and $\bar{\g}[t]$ and $t^{-1}\bar{\g}[t^{-1}] := \bar{\g} \tensor t^{-1}\bbC[t^{-1}]$ are Lie subalgebras of $\bar{\g}[t^{\pm 1}]$ in the canonical manner,
+            \item the symmetric, non-degenerate, and invariant bilinear form $(\cdot, \cdot)_{\bar{\g}[t^{\pm}]}$ on $\bar{\g}[t^{\pm}]$ is given as in equation \eqref{equation: current_algebra_pairing}, with $Z := \Z$ and $n_0 := -1$, and one checks that the Lie subalgebras $\bar{\g}[t]$ and $t^{-1}\bar{\g}[t^{-1}]$ are (maximally) isotropic with respect to this bilinear form,
+            \item $\bar{\g}[t]$ is regarded as a $\Z$-graded Lie algebra by means of:
                 $$\deg(x f) := \deg f \quad, \quad \text{$f \in \bbC[t]$ homogeneous}$$
-            and then the Lie algebra $t^{-1}\g[t^{-1}]$ is regarded as the $\Z$-graded dual of $\g[t]$, and we note that $\g[t^{\pm 1}] = \g[t] \oplus t^{-1}\g[t^{-1}]$.
+            and then the Lie algebra $t^{-1}\bar{\g}[t^{-1}]$ is regarded as the $\Z$-graded dual of $\bar{\g}[t]$, and we note that $\bar{\g}[t^{\pm 1}] = \bar{\g}[t] \oplus t^{-1}\bar{\g}[t^{-1}]$.
         \end{itemize}
         The Manin triple \eqref{equation: finite_yangian_manin_triples} then gives rise to a quasi-triangular $\Z$-graded Lie bialgebra structure:
             \begin{equation}
-                \dot{\delta}_{\rational}^+: \g[t] \to \g[t_1] \tensor \g[t_2^{-1}] 
+                \dot{\delta}_{\rational}^+: \bar{\g}[t] \to \bar{\g}[t_1] \tensor \bar{\g}[t_2^{-1}] 
             \end{equation}
         given by:
             \begin{equation} \label{equation: finite_yangian_cobracket}
                 \begin{gathered}
-                    \dot{\delta}_{\rational}^+(X) := \left[\Box(X), \dot{\calr}_{\rational} \right] \quad, \quad X \in \g[t]
+                    \dot{\delta}_{\rational}^+(X) := \left[\Box(X), \dot{\calr}_{\rational} \right] \quad, \quad X \in \bar{\g}[t]
                     \\
-                    \dot{\calr}_{\rational} := \calr \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+ = \frac{\calr}{t_2 - t_1}
+                    \dot{\calr}_{\rational} := \bar{\calr} \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+ = \frac{\bar{\calr}}{t_2 - t_1}
                 \end{gathered}
             \end{equation}
         wherein:
-            $$\calr := \calr_{\g, (\g^*)^{\op}}$$
-        is the Casimir tensor\footnote{... or in other words, the canonical tensor of the non-degenerate bilinear form $(\cdot, \cdot)_{\Dr(\g)}$ that helps defines the standard Manin triple $( \Dr(\g), \g, (\g^*)^{\op} )$.} of $\g$, and $\1\left( \frac{t_2}{t_1} \right)^+$ is as in equation \eqref{equation: positive_negative_dirac_delta_distributions}.
+            $$\bar{\calr} := \calr_{\bar{\g}, (\bar{\g}^*)^{\op}}$$
+        is the Casimir tensor\footnote{... or in other words, the canonical tensor of the non-degenerate bilinear form $(\cdot, \cdot)_{\Dr(\bar{\g})}$ that helps defines the standard Manin triple $( \Dr(\bar{\g}), \bar{\g}, (\bar{\g}^*)^{\op} )$.} of $\bar{\g}$, and $\1\left( \frac{t_2}{t_1} \right)^+$ is as in equation \eqref{equation: positive_negative_dirac_delta_distributions}.
         
         \begin{remark}
             \begin{itemize}
                 \item We are to interpret $\dot{\delta}_{\rational}^+(X)$ as in equation \eqref{equation: finite_yangian_cobracket} as a formal sum of its components:
-                    $$\dot{\delta}_{\rational}^+(X)_m := [\Box(X), \calr \cdot t_1^m t_2^{-m - 1}] \in t_1^m \g[t_1] \tensor t_2^{-m - 1} \g[t_2^{-1}] \quad, \quad \text{$X \in \g[t]$ homogeneous}$$
+                    $$\dot{\delta}_{\rational}^+(X)_m := [\Box(X), \bar{\calr} \cdot t_1^m t_2^{-m - 1}] \in t_1^m \bar{\g}[t_1] \tensor t_2^{-m - 1} \bar{\g}[t_2^{-1}] \quad, \quad \text{$X \in \bar{\g}[t]$ homogeneous}$$
                 \item One can also interpret the cobracket \eqref{equation: finite_yangian_cobracket} as a topological Lie bialgebra structure:
-                    $$\dot{\delta}_{\rational}^+: \g[t] \to \g[t_1] \hattensor \g[\![t_2^{-1}]\!]$$
-                wherein we regard the RHS as the $(t_1, t_2^{-1})$-adic closure of $\g[t_1] \tensor \g[t_2^{-1}]$ inside $(\g \tensor \g)[\![t_1, t_2^{-1}]\!]$.
+                    $$\dot{\delta}_{\rational}^+: \bar{\g}[t] \to \bar{\g}[t_1] \hattensor \bar{\g}[\![t_2^{-1}]\!]$$
+                wherein we regard the RHS as the $(t_1, t_2^{-1})$-adic closure of $\bar{\g}[t_1] \tensor \bar{\g}[t_2^{-1}]$ inside $(\bar{\g} \tensor \bar{\g})[\![t_1, t_2^{-1}]\!]$.
             \end{itemize}
         \end{remark}
 
@@ -284,17 +289,17 @@
             From equation \eqref{equation: positive_negative_dirac_delta_distributions}, we know that:
                 $$\1\left( \frac{t_2}{t_1} \right)^- = -\1\left( \frac{t_2}{t_1} \right)^+$$
             At the same time, we know that the ($\Z$-graded) dual cobracket:
-                $$\dot{\delta}_{\rational}^-: t^{-1}\g[t^{-1}] \to t_1^{-1}\g[t_1^{-1}] \tensor t_2\g[t_2]$$
-            on $t^{-1}\g[t^{-1}] \cong \g[t]^{\star}$ is supposed to be given by:
+                $$\dot{\delta}_{\rational}^-: t^{-1}\bar{\g}[t^{-1}] \to t_1^{-1}\bar{\g}[t_1^{-1}] \tensor t_2\bar{\g}[t_2]$$
+            on $t^{-1}\bar{\g}[t^{-1}] \cong \bar{\g}[t]^{\star}$ is supposed to be given by:
                 $$\dot{\delta}_{\rational}^- = ( \dot{\delta}_{\rational}^+ )^{\cop}$$
             Therefore, the dual cobracket can be given more succinctly by the following formula:
                 \begin{equation} \label{equation: finite_dual_yangian_cobracket}
                     \begin{aligned}
                         \dot{\delta}_{\rational}^-(Y) & = [\Box(Y), -\dot{\calr}_{\rational}]
                         \\
-                        & = [\Box(Y), \calr \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^-]
+                        & = [\Box(Y), \bar{\calr} \cdot t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^-]
                     \end{aligned}
-                    \quad, \quad Y \in t^{-1}\g[t^{-1}]
+                    \quad, \quad Y \in t^{-1}\bar{\g}[t^{-1}]
                 \end{equation}
         \end{remark}
         
@@ -303,7 +308,7 @@
         and then let:
             \begin{equation} \label{equation: positive_and_negative_toroidal_lie_algebras}
                 \begin{gathered}
-                    \toroidal_A^+ := \uce( t^{-s_0 - 1} \g[v^{\pm 1}, t] ) \quad, \quad \toroidal_A^- := \uce( t^{s_0} \g[v^{\pm 1}, t^{-1}] )
+                    \toroidal_A^+ := \uce( t^{-s_0 - 1} \bar{\g}[v^{\pm 1}, t] ) \quad, \quad \toroidal_A^- := \uce( t^{s_0} \bar{\g}[v^{\pm 1}, t^{-1}] )
                     \\
                     \z_A^+ := \z( \toroidal_A^+ ) \quad, \quad \z_A^- := \z( \toroidal_A^- )
                 \end{gathered}
@@ -315,21 +320,21 @@
         
         Via the fact that:
             \begin{equation} \label{equation: positive_and_negative_double_loop_algebras}
-                t^{-s_0 - 1} \g[v^{\pm}, t] \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \g \tensor \bbC v^r t^{s - s_0 - 1}
+                t^{-s_0 - 1} \bar{\g}[v^{\pm}, t] \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bar{\g} \tensor \bbC v^r t^{s - s_0 - 1}
                 \quad, \quad
-                t^{s_0} \g[v^{\pm}, t^{-1}] \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \g \tensor \bbC v^{-r} t^{-s + s_0}
+                t^{s_0} \bar{\g}[v^{\pm}, t^{-1}] \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bar{\g} \tensor \bbC v^{-r} t^{-s + s_0}
             \end{equation}
         we have the following descriptions for $\z_A^{\pm}$:
             \begin{equation} \label{equation: positive_and_negative_toroidal_centres}
-                \z_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC K_{r, s} \oplus \bbC c_v
+                \z_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bbC K_{r, s} \oplus \bbC c_v
                 \quad, \quad
-                \z_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC K_{-r, -s + s_0} \oplus \bbC c_t
+                \z_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bbC K_{-r, -s + s_0} \oplus \bbC c_t
             \end{equation}
         with $K_{r, s}, c_v, c_t$ as in equation \eqref{equation: toroidal_centre_basis}. In turn, these explicit realisations for $\z_A^{\pm}$ tell us that:
             \begin{equation} \label{equation: positive_and_negative_div_zero_vector_fields}
-                \d_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC D_{-r, -s + s_0} \oplus \bbC D_t
+                \d_A^+ \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bbC D_{-r, -s + s_0} \oplus \bbC D_t
                 \quad, \quad
-                \d_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\geq 0}} \bbC D_{r, s} \oplus \bbC D_v
+                \d_A^- \cong \bigoplus_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \bbC D_{r, s} \oplus \bbC D_v
             \end{equation}
         with $D_{r, s}, D_v, D_t$ as in equation \eqref{equation: div_zero_vector_fields_basis}. Now, even though the constructions above are designed so that:
             $$\extendedtoroidal_A = \extendedtoroidal_A^+ \oplus \extendedtoroidal_A^-$$
@@ -347,7 +352,7 @@
         \end{proposition}
             \begin{proof}
                 Through equation \eqref{equation: positive_and_negative_double_loop_algebras}, we see that:
-                    $$( t^{-s_0 - 1} \g[v^{\pm}, t] )^{\star} \cong t^{s_0} \g[v^{\pm}, t]$$
+                    $$( t^{-s_0 - 1} \bar{\g}[v^{\pm}, t] )^{\star} \cong t^{s_0} \bar{\g}[v^{\pm}, t]$$
                 with respect to the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ of degree $(r_0, s_0)$ if and only if $(r_0, s_0) = (0, -1)$, since the graded duality above holds if and only if:
                     $$(r_0, s_0) = (r, s - s_0 - 1) + (-r, -s + s_0)$$
                 and after simplifying, this yields:
@@ -362,10 +367,10 @@
         \begin{remark}
             Primarily, we are interested in the case when the bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ has degree:
                 $$(r_0, s_0) = (0, -1)$$
-            because $\toroidal_A$ would then be classical limit of the Yangian of the affine Kac-Moody algebra $\hat{\g}$. Obviously, there are no differences beyond visual ones between the cases when $(r_0, s_0) = (0, -1) \not = (0, 0)$ and when $(r_0, s_0) = (-1, 0) \not = (0, 0)$, so it is not necessary to consider the latter explicitly. 
+            because $\toroidal_A$ would then be classical limit of the Yangian of the affine Kac-Moody algebra $\g$. Obviously, there are no differences beyond visual ones between the cases when $(r_0, s_0) = (0, -1) \not = (0, 0)$ and when $(r_0, s_0) = (-1, 0) \not = (0, 0)$, so it is not necessary to consider the latter explicitly. 
 
             It would also be interesting to consider cases when $r_0 = s_0 = -1$ simultaneously. In such cases, there will be two distinct families of toroidal Lie (bi)algebras, namely of the forms:
-                $$\uce( \g[v, t] ) \quad, \quad \uce( v^{-1} \g[v^{-1}, t] )$$
+                $$\uce( \bar{\g}[v, t] ) \quad, \quad \uce( v^{-1} \bar{\g}[v^{-1}, t] )$$
             which when quantised, will yield us two families of quantum groups, with the first being \say{Yangian-like} in both variables, while the second is \say{dual-Yangian-like} in the first variables while \say{Yangian-like} in the second variable. To our knowledge, such quantisations have never before been considered in the literature, but we will defer such considerations until later, for doing so would deviate too far from the scope of the current work.
         \end{remark}
 
@@ -383,62 +388,62 @@
             $$\ddot{\calr}_{\rational} \in \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^-$$
         denote the canonical $2$-tensor associated to the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$. We shall attempt to demonstrate that:
             $$\ddot{\delta}_{\rational}^+(X) = [ \Box(X), \ddot{\calr}_{\rational} ] \quad, \quad X \in \extendedtoroidal_A^+$$
-        thereby proving not only that $\ddot{\delta}_{\rational}^+: \extendedtoroidal_A^+ \to \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^+$ is a $\Z^2$-graded Lie bialgebra structure, but moreover, that it is coboundary. To do so, we shall have to demonstrate that $\CYBE(\ddot{\calr}_{\rational}) \in \left( \bigwedge^3 \extendedtoroidal_A \right)^{\extendedtoroidal_A}$; in fact, it will even be shown that $\CYBE(\ddot{\calr}_{\rational}) = 0$, thus proving that $\ddot{\delta}_{\rational}^+$ is quasi-triangular. In any event, however, the first step shall be to write down an explicit description of $\ddot{\calr}_{\rational}$. \textit{A priori}, this can be done by first choosing a basis:
-            $$\{ J_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \subset \extendedtoroidal_A^+ \quad, \quad \deg J_{r, s} = (r, s)$$
-        for the $\Z \x \Z_{\geq 0}$-graded Lie algebra $\extendedtoroidal_A^+$, and then a graded-dual basis:
-            $$\{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \subset \extendedtoroidal_A^- \quad, \quad \deg J_{r, s}^{\star} = (-r, -s - 1)$$
+        thereby proving not only that $\ddot{\delta}_{\rational}^+: \extendedtoroidal_A^+ \to \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^+$ is a $\Z^2$-graded Lie bialgebra structure, but moreover, that it is coboundary. To do so, we shall have to demonstrate that $\schouten{ \ddot{\calr}_{\rational}, \ddot{\calr}_{\rational} } \in \left( \bigwedge^3 \extendedtoroidal_A \right)^{\extendedtoroidal_A}$; in fact, it will even be shown that $\schouten{ \ddot{\calr}_{\rational}, \ddot{\calr}_{\rational} } = 0$, thus proving that $\ddot{\delta}_{\rational}^+$ is quasi-triangular. In any event, however, the first step shall be to write down an explicit description of $\ddot{\calr}_{\rational}$. \textit{A priori}, this can be done by first choosing a basis:
+            $$\{ J_{r, s} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \subset \extendedtoroidal_A^+ \quad, \quad \deg J_{r, s} = (r, s)$$
+        for the $\Z \x \Z_{\bar{\g}eq 0}$-graded Lie algebra $\extendedtoroidal_A^+$, and then a graded-dual basis:
+            $$\{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \subset \extendedtoroidal_A^- \quad, \quad \deg J_{r, s}^{\star} = (-r, -s - 1)$$
         (with respect to the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$), and then we shall get:
             \begin{equation} \label{equation: extended_toroidal_classical_r_matrices_general_form}
-                \ddot{\calr}_{\rational} = \sum_{(r, s) \in \Z \x \Z_{\geq 0}} J_{r, s} \tensor J_{r, s}^{\star}
+                \ddot{\calr}_{\rational} = \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} J_{r, s} \tensor J_{r, s}^{\star}
             \end{equation}
         Now, the manner in which we constructed the Manin triple \eqref{equation: extended_toroidal_manin_triples} has already supplied us with such dual bases, namely:
             $$
                 \begin{gathered}
-                    \{ J_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} := 
+                    \{ J_{r, s} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} := 
                     \begin{aligned}
-                        & \{ x_i v^r t^s \}_{1 \leq i \leq \dim \g, (r, s) \in \Z \x \Z_{\geq 0}}
+                        & \{ x_i v^r t^s \}_{1 \leq i \leq \dim \bar{\g}, (r, s) \in \Z \x \Z_{\bar{\g}eq 0}}
                         \\
-                        & \cup \left( \{ K_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ c_v \} \right)
+                        & \cup \left( \{ K_{r, s} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \cup \{ c_v \} \right)
                         \\
-                        & \cup \left( \{ D_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t \} \right)
+                        & \cup \left( \{ D_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \cup \{ D_t \} \right)
                     \end{aligned}
                     \\
-                    \{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\geq 0}} := 
+                    \{ J_{r, s}^{\star} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} := 
                     \begin{aligned}
-                        & \{ (x_i v^r t^s)^{\star} = x_i^* v^{-r} t^{-s - 1} \}_{1 \leq i \leq \dim \g, (r, s) \in \Z \x \Z_{\geq 0}}
+                        & \{ (x_i v^r t^s)^{\star} = x_i^* v^{-r} t^{-s - 1} \}_{1 \leq i \leq \dim \bar{\g}, (r, s) \in \Z \x \Z_{\bar{\g}eq 0}}
                         \\
-                        & \cup \left( \{ K_{r, s}^{\star} = D_{r, s} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ c_v^{\star} = D_v \} \right)
+                        & \cup \left( \{ K_{r, s}^{\star} = D_{r, s} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \cup \{ c_v^{\star} = D_v \} \right)
                         \\
-                        & \cup \left( \{ D_{-r, -s - 1}^{\star} = K_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\geq 0}} \cup \{ D_t^{\star} = c_t \} \right)
+                        & \cup \left( \{ D_{-r, -s - 1}^{\star} = K_{-r, -s - 1} \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} \cup \{ D_t^{\star} = c_t \} \right)
                     \end{aligned}
                 \end{gathered}
             $$
-        for some bases $\{x_i\}_{1 \leq i \leq \dim \g} \subset \g$ and $\{x_i^*\}_{1 \leq i \leq \dim \g} \subset \g^*$ that are dual to one another with respect to the non-degenerate bilinear form $(\cdot, \cdot)_{\g}$; note also, that because we are supposing that $(r_0, s_0) = (0, s_0) \not = (0, 0)$, the graded-dual basis $\{ J_{r, s}^* \}_{(r, s) \in \Z \x \Z_{\geq 0}}$ is indeed indexed by $\Z \x \Z_{< 0}$, and hence lies in the $\Z \x \Z_{< 0}$-graded Lie algebra $\extendedtoroidal_A^-$. Using these dual bases, we can then expand upon equation \eqref{equation: extended_toroidal_classical_r_matrices_general_form} as follows:
+        for some bases $\{x_i\}_{1 \leq i \leq \dim \bar{\g}} \subset \bar{\g}$ and $\{x_i^*\}_{1 \leq i \leq \dim \bar{\g}} \subset \bar{\g}^*$ that are dual to one another with respect to the non-degenerate bilinear form $(\cdot, \cdot)_{\bar{\g}}$; note also, that because we are supposing that $(r_0, s_0) = (0, s_0) \not = (0, 0)$, the graded-dual basis $\{ J_{r, s}^* \}_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}}$ is indeed indexed by $\Z \x \Z_{< 0}$, and hence lies in the $\Z \x \Z_{< 0}$-graded Lie algebra $\extendedtoroidal_A^-$. Using these dual bases, we can then expand upon equation \eqref{equation: extended_toroidal_classical_r_matrices_general_form} as follows:
             $$
                 \begin{aligned}
                     & \ddot{\calr}_{\rational}
                     \\
-                    & = \sum_{(r, s) \in \Z \x \Z_{\geq 0}} J_{r, s} \tensor J_{r, s}^{\star}
+                    & = \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} J_{r, s} \tensor J_{r, s}^{\star}
                     \\
                     & =
                     \begin{aligned}
-                        & \sum_{(r, s) \in \Z \x \Z_{\geq 0}} x_i v_1^r t_1^s \tensor (x_i v_2^r t_2^s)^{\star}
+                        & \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} x_i v_1^r t_1^s \tensor (x_i v_2^r t_2^s)^{\star}
                         \\
-                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor K_{r, s}^{\star} + c_{v_1} \tensor c_{v_2}^{\star} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r, -s - 1} \tensor D_{-r, -s - 1}^{\star} + D_{t_1} \tensor D_{t_2}^{\star} \right)
+                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} K_{r, s} \tensor K_{r, s}^{\star} + c_{v_1} \tensor c_{v_2}^{\star} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} D_{-r, -s - 1} \tensor D_{-r, -s - 1}^{\star} + D_{t_1} \tensor D_{t_2}^{\star} \right)
                     \end{aligned}
                     \\
                     & = 
                     \begin{aligned}
-                        & \calr \cdot \1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+
+                        & \bar{\calr} \cdot \1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+
                         \\
-                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor D_{r, s} + c_{v_1} \tensor D_{v_2} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\geq 0}} D_{-r, -s - 1} \tensor K_{-r, -s - 1} + D_{t_1} \tensor c_{t_2} \right)
+                        & + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} K_{r, s} \tensor D_{r, s} + c_{v_1} \tensor D_{v_2} \right) + \quad \left( \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} D_{-r, -s - 1} \tensor K_{-r, -s - 1} + D_{t_1} \tensor c_{t_2} \right)
                     \end{aligned}
                 \end{aligned}
             $$
         Using the explicit formulae for the elements $K_{r, s}, c_v, c_t$ (cf. equation \eqref{equation: toroidal_centre_basis}) and $D_{r, s}, D_v, D_t$ (cf. equation \eqref{equation: div_zero_vector_fields_basis}), we get\footnote{Recall also that $\1\left( \frac{t_2}{t_1} \right)^- = -\1\left( \frac{t_2}{t_1} \right)^+$ (cf. equation \eqref{equation: positive_negative_dirac_delta_distributions}).}:
             $$
                 \begin{aligned}
-                    & \sum_{(r, s) \in \Z \x \Z_{\geq 0}} K_{r, s} \tensor D_{r, s}
+                    & \sum_{(r, s) \in \Z \x \Z_{\bar{\g}eq 0}} K_{r, s} \tensor D_{r, s}
                     \\
                     & = \sum_{(r, s) \in \Z \x \Z_{> 0}} K_{r, s} \tensor D_{r, s} + \sum_{(r, s) \in \Z \x \{0\}} K_{0, s} \tensor D_{0, s}
                     \\
@@ -449,6 +454,7 @@
                     & = \1\left( \frac{v_2}{v_1} \right) t_2^{-1} \1\left( \frac{t_2}{t_1} \right)^+ \bar{d}v_1 \tensor \del_{v_2} + [...] - \1\left( \frac{v_2}{v_1} \right) t_1^{-1} \bar{d}t_1 \tensor \del_{t_2}
                 \end{aligned}
             $$
+        \todo[inline]{Dat: Peggy, do you see any way to deal with the $\frac1s$ term in the middle term in the 3rd line ? Also, did I make any computational mistake here ?}
             
         \begin{theorem}[Extended toroidal Lie bialgebras] \label{theorem: extended_toroidal_lie_bialgebras}
             Suppose that:
@@ -456,17 +462,24 @@
             \begin{enumerate}
                 \item The canonical tensor for the non-degenerate bilinear form $(\cdot, \cdot)_{\extendedtoroidal_A}$ is given explicitly by the following formula:
                     \begin{equation} \label{equation: extended_toroidal_classical_r_matrices}
-                        \ddot{\calr}_{\rational} = (\calr + [...]) \cdot v_2 \1(v_1 v_2^{-1}) t_2^{-1} \1(t_1/t_2)^+ + \ddot{\calr}_v + \ddot{\calr}_t
+                        \ddot{\calr}_{\rational} = (\bar{\calr} + [...]) \cdot v_2 \1(v_1 v_2^{-1}) t_2^{-1} \1(t_1/t_2)^+ + [...]
                     \end{equation}
                 \item Moreover, the $2$-tensor $\ddot{\calr}_{\rational} \in \extendedtoroidal_A \tensor \extendedtoroidal_A$ as in equation \eqref{equation: extended_toroidal_classical_r_matrices} above satisfies the CYBE \eqref{equation: CYBEs}, i.e. we have:
-                    $$\CYBE( \ddot{\calr}_{\rational} ) = 0$$
+                    $$\schouten{ \ddot{\calr}_{\rational}, \ddot{\calr}_{\rational} } = 0$$
                 Thus, there is a quasi-triangular $\Z^2$-graded Lie bialgebra structure:
                     $$\ddot{\delta}_{\rational}^+: \extendedtoroidal_A^+ \to \extendedtoroidal_A^+ \tensor \extendedtoroidal_A^+$$
             \end{enumerate}
         \end{theorem}
             \begin{proof}
                 \begin{enumerate}
-                    \item Essentially, our job is to combine the $\bbC[v^{\pm 1}, t^{\pm 1}]$-coefficients in the expressions of the basis elements of $\g \tensor A, \z_A$, and $\d_A$ (see equations \ref{equation: toroidal_centre_basis} and \eqref{equation: div_zero_vector_fields_basis}).
+                    \item Essentially, our job is to combine the $\bbC[v^{\pm 1}, t^{\pm 1}]$-coefficients in the expressions of the basis elements of $\bar{\g} \tensor A, \z_A$, and $\d_A$ (see equations \ref{equation: toroidal_centre_basis} and \eqref{equation: div_zero_vector_fields_basis}).
                     \item 
                 \end{enumerate}
+            \end{proof}
+
+        \begin{theorem}[Toroidal Lie bialgebras] \label{theorem: toroidal_lie_bialgebras}
+            $( \toroidal_A^+, \ddot{\delta}_{\rational}^+|_{\toroidal_A^+} )$ is a Lie sub-bialgebra of $( \extendedtoroidal_A^+, \ddot{\delta}_{\rational}^+ )$.
+        \end{theorem}
+            \begin{proof}
+                
             \end{proof}

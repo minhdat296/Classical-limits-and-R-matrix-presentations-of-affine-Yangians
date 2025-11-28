@@ -1,4 +1,6 @@
-Let us recall some basic features of Kac-Moody algebras. The canonical reference is the book \cite{kac_infinite_dimensional_lie_algebras}.
+Let us recall some basic features of Kac-Moody algebras. The canonical reference is the book \cite{kac_infinite_dimensional_lie_algebras}. Let:
+    $$\bbk$$
+be an algebraically closed field of characteristic $0$; usually, this is taken to be $\bbC$.
 
 Following \cite[Chapter 1]{kac_infinite_dimensional_lie_algebras}, let $C := ( C_{i, j} )_{1 \leq i, j \leq n}$ be a (generalised) Cartan matrix and choose for it a realisation:
     $$(\h, \simpleroots, \simpleroots^{\vee})$$
@@ -48,17 +50,17 @@ Henceforth, let us assume moreover that the Cartan matrix $C$ is symmetrisable, 
     \begin{equation} \label{equation: symmetrising_cartan_matrices}
         C := DA
     \end{equation}
-This allows us to define a symmetric and non-degenerate bilinear form $(\cdot, \cdot)_{\h} \in \Hom( \Sym^2(\h), \bbC )$ given by:
+This allows us to define a symmetric and non-degenerate bilinear form $(\cdot, \cdot)_{\h} \in \Hom( \Sym^2(\h), \bbk )$ given by:
     \begin{equation} \label{equation: kac_moody_pairing_on_cartan_subalgebras}
         ( \alpha_i^{\vee}, h )_{\h} := \delta_{i, j} D_{i, i}^{-1} \alpha_i(h) \quad, \quad h \in \h, 1 \leq i \leq n
     \end{equation}
 As an aside, we note that equations \eqref{equation: kac_moody_pairing_on_cartan_subalgebras} and \eqref{equation: cartan_matrix_entries} together imply that:
     $$A_{i, j} = (\alpha_i^{\vee}, \alpha_j^{\vee})_{\h} = \delta_{i, j} D_{i, i}^{-1} \alpha_i( \alpha_j^{\vee} ) = \delta_{i, j} D_{i, i}^{-1} C_{i, j}$$
-Anyhow, the bilinear form $(\cdot, \cdot)_{\h}$ constructed above induces, via an induction process\footnote{For a less \textit{ad hoc} construction of $(\cdot, \cdot)_{\g}$, we refer the reader to \cite{neher_pianzola_prelat_sepp_invariant_bilinear_forms_via_fppf_descent}.}, a symmetric, non-degenerate, and \textit{invariant} bilinear form $(\cdot, \cdot)_{\g} \in \Hom( \Sym^2(\g)^{\g}, \bbC )$ given by:
+Anyhow, the bilinear form $(\cdot, \cdot)_{\h}$ constructed above induces, via an induction process\footnote{For a less \textit{ad hoc} construction of $(\cdot, \cdot)_{\g}$, we refer the reader to \cite{neher_pianzola_prelat_sepp_invariant_bilinear_forms_via_fppf_descent}.}, a symmetric, non-degenerate, and \textit{invariant} bilinear form $(\cdot, \cdot)_{\g} \in \Hom( \Sym^2(\g)^{\g}, \bbk )$ given by:
     \begin{equation} \label{equation: kac_moody_pairing}
         ( e_i^-, e_j^+ )_{\g} = \delta_{i, j} D_{i, i}^{-1} \quad, \quad 1 \leq i, j \leq n
     \end{equation}
-and is uniquely determined by $(\cdot, \cdot)_{\h}$. Moreover, the bilinear form $(\cdot, \cdot)_{\g}$ extends to $\tilde{\g}$; this extension is a degenerate bilinear form whose radical is precisely $\r \subset \tilde{\g}$. Additionally, and this is a rather important fact for us, the bilinear form $(\cdot, \cdot)_{\g}$ is of total degree $0$ with respect to the grading on $\Hom( \Sym^2(\g)^{\g}, \bbC )$ by the root lattice $\rootlattice$, induced by the one on $\g$ (and this is one reason why the root spaces $\g_{\alpha} \subset \g$ being finite-dimensional is important).
+and is uniquely determined by $(\cdot, \cdot)_{\h}$. Moreover, the bilinear form $(\cdot, \cdot)_{\g}$ extends to $\tilde{\g}$; this extension is a degenerate bilinear form whose radical is precisely $\r \subset \tilde{\g}$. Additionally, and this is a rather important fact for us, the bilinear form $(\cdot, \cdot)_{\g}$ is of total degree $0$ with respect to the grading on $\Hom( \Sym^2(\g)^{\g}, \bbk )$ by the root lattice $\rootlattice$, induced by the one on $\g$ (and this is one reason why the root spaces $\g_{\alpha} \subset \g$ being finite-dimensional is important).
 \begin{convention}
     For brevity, let us refer to symmetric (and often also non-degenerate) and invariant bilinear forms as \say{invariant pairings}.
 \end{convention}
